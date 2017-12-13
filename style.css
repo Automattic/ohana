@@ -40,6 +40,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Media
 	## Captions
 	## Galleries
+# Gutenberg
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
@@ -851,3 +852,138 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+/*--------------------------------------------------------------
+## Gutenberg Styles
+--------------------------------------------------------------*/
+
+/* Dropcaps */
+.has-drop-cap {}
+.alignleft {}
+.aligncenter {}
+.alignright {}
+.alignwide {}
+.alignfull {}
+
+/* Images */
+.wp-block-image {}
+.alignleft {}
+.aligncenter {}
+.alignright {}
+.alignwide {}
+.alignfull {}
+
+/* Galleries */
+.wp-block-gallery {}
+.alignleft {}
+.aligncenter {}
+.alignright {}
+.alignwide {}
+.alignfull {}
+.columns-1 {}
+.columns-2 {}
+.columns-3 {}
+.columns-4 {}
+.columns-5 {}
+
+/* Blockquotes*/
+.wp-block-quote {}
+.blocks-quote-style-1 {}
+.blocks-quote-style-2 {}
+
+/* Cover Images */
+.wp-block-cover-image {}
+.has-background-dim {}
+.has-parallax {}
+
+/* Video */
+.wp-block-video {}
+.alignleft {}
+.aligncenter {}
+.alignright {}
+.alignwide {}
+.alignfull {}
+
+/* Audio */
+.wp-block-audio {}
+.alignleft {}
+.aligncenter {}
+.alignright {}
+.alignwide {}
+.alignfull {}
+
+/* Pullquotes */
+.wp-block-pullquote {}
+.alignleft {}
+.aligncenter {}
+.alignright {}
+.alignwide {}
+.alignfull {}
+
+/* Tables */
+.wp-block-table {}
+.alignleft {}
+.aligncenter {}
+.alignright {}
+.alignwide {}
+.alignfull {}
+
+/* Preformatted */
+.wp-block-preformatted {}
+.alignleft {}
+.aligncenter {}
+.alignright {}
+.alignwide {}
+
+/* Code */
+.wp-block-code {}
+.alignleft {}
+.aligncenter {}
+.alignright {}
+.alignwide {} {}
+.alignfull {}
+
+/* Verse */
+.wp-block-verse {}
+
+/* Separator */
+.wp-block-separator {}
+
+/* Buttons */
+.wp-block-button {}
+.alignleft {}
+.aligncenter {}
+.alignright {}
+.alignwide {}
+.alignfull {}
+
+/* Text Columns */
+.wp-block-text-columns {}
+.wp-block-column {}
+.aligncenter {}
+.alignwide {}
+.alignfull {}
+.columns-1 {}
+.columns-2 {}
+.columns-3 {}
+.columns-4 {}
+
+/* Latest Posts */
+.wp-block-latest-posts {}
+.aligncenter {}
+.alignwide {} {}
+.alignfull {}
+.wp-block-latest-posts__post-date {}
+.is-grid {}
+.columns-3 {}
+
+/* Categories */
+.wp-block-categories {}
+.wp-block-categories-list {}
+.wp-block-categories-dropdown {}
+.alignleft {}
+.aligncenter {}
+.alignright {}
+.alignwide {}
+.alignfull {}
+
