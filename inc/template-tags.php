@@ -51,15 +51,27 @@ if ( ! function_exists( 'nurture_2_entry_footer' ) ) :
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( esc_html__( ', ', 'nurture-2' ) );
 			if ( $categories_list ) {
-				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'nurture-2' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				/* translators:
+					1: Categories string,
+					2: Categories icon,
+					3: list of categories. */
+				printf( '<span class="cat-links"><span class="screen-reader-text">%1$s</span> %2$s %3$s</span>',
+						 esc_html__( 'Categories:', 'nurture-2' ),
+						 nurture_2_get_svg( array( 'icon' => 'category' ) ),
+						 $categories_list );
 			}
 
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'nurture-2' ) );
 			if ( $tags_list ) {
-				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'nurture-2' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				/* translators:
+					1: Tags string,
+					2: Tags icon,
+					3: list of tags. */
+				printf( '<span class="tags-links"><span class="screen-reader-text">%1$s</span> %2$s %3$s</span>',
+						 esc_html__( 'Tags:', 'nurture-2' ),
+						 nurture_2_get_svg( array( 'icon' => 'tag' ) ),
+						 $tags_list );
 			}
 		}
 

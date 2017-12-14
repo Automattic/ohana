@@ -118,6 +118,7 @@ add_action( 'widgets_init', 'nurture_2_widgets_init' );
  */
 function nurture_2_scripts() {
 	wp_enqueue_style( 'nurture-2-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'nurture-2-fonts', nurture_2_fonts_url(), array(), null );
 
 	wp_enqueue_script( 'nurture-2-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -128,6 +129,36 @@ function nurture_2_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'nurture_2_scripts' );
+
+/**
+ * Enqueuing Google Fonts
+ */
+function nurture_2_fonts_url() {
+	$fonts_url = '';
+
+	/* Translators: If there are characters in your language that are not
+	* supported by Slabo 13px, translate this to 'off'. Do not translate
+	* into your own language.
+	*/
+	$slabo_13px = esc_html_x( 'on', 'Slabo 13px font: on or off', 'nurture-2' );
+
+	if ( 'off' !== $slabo_13px ) {
+		$font_families = array();
+
+		if ( 'off' !== $slabo_13px ) {
+			$font_families[] = 'Slabo+13px';
+		}
+
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+
+		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+	}
+
+	return esc_url_raw( $fonts_url );
+}
 
 /**
  * Implement the Custom Header feature.
@@ -148,6 +179,11 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * SVG Icons
+ */
+require get_template_directory() . '/inc/icon-functions.php';
 
 /**
  * Load Jetpack compatibility file.
