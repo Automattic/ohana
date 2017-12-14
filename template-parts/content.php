@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Nurture_2
+ * @package Ohana
  */
 
 ?>
@@ -20,20 +20,20 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php nurture_2_posted_on(); ?>
+			<?php ohana_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php nurture_2_post_thumbnail(); ?>
+	<?php ohana_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
 			the_content( sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'nurture-2' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'ohana' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -44,13 +44,13 @@
 			) );
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'nurture-2' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ohana' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php nurture_2_entry_footer(); ?>
+		<?php ohana_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

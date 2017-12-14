@@ -10,10 +10,14 @@
 	margin-bottom: 1.5em;
 }
 
+*[class^="wp-block-"].alignleft,
+*[class^="wp-block-"].alignright {
+	max-width: 50%;
+}
+
 .alignfull,
 .alignwide,
 .aligncenter {
-	/* text-align: center; */
 	clear: both;
 }
 
@@ -21,11 +25,17 @@
 	.alignfull {
 		margin-left: calc(50% - 50vw);
 		margin-right: calc(50% - 50vw);
+		max-width: 1000%;
 	}
-}
 
-@media (min-width: 750px) {
-	.wp-block-text-columns.alignfull {
+	/* Let's reduce this a bit for blocks with text */
+	.wp-block-text-columns.alignfull,
+	.wp-block-table.alignfull,
+	.wp-block-preformatted.alignfull,
+	.wp-block-button.alignfull,
+	.wp-block-pullquote.alignfull,
+	.wp-block-latest-posts.alignfull,
+	.wp-block-categories.alignfull {
 		margin-left: calc(50% - 48vw);
 		margin-right: calc(50% - 48vw);
 	}
@@ -102,29 +112,15 @@
 
 /* Audio */
 .wp-block-audio {}
-.wp-block-audio.alignleft {}
-.wp-block-audio.aligncenter {}
-.wp-block-audio.alignright {}
-.wp-block-audio.alignwide {}
-.wp-block-audio.alignfull {}
 
 /* Embed */
+.wp-block-embed {}
 
 /* Pullquotes */
 .wp-block-pullquote {}
-.wp-block-pullquote.alignleft {}
-.wp-block-pullquote.aligncenter {}
-.wp-block-pullquote.alignright {}
-.wp-block-pullquote.alignwide {}
-.wp-block-pullquote.alignfull {}
 
 /* Tables */
 .wp-block-table {}
-.wp-block-table.alignleft {}
-.wp-block-table.aligncenter {}
-.wp-block-table.alignright {}
-.wp-block-table.alignwide {}
-.wp-block-table.alignfull {}
 
 /* Preformatted */
 .wp-block-preformatted {}
@@ -144,12 +140,6 @@
 /* Text Columns */
 .wp-block-text-columns {}
 .wp-block-column {}
-@media (min-width: 750px) {
-	.wp-block-text-columns.alignfull {
-		margin-left: calc(50% - 48vw);
-		margin-right: calc(50% - 48vw);
-	}
-}
 .columns-1 {}
 .columns-2 {}
 .columns-3 {}
@@ -157,9 +147,6 @@
 
 /* Latest Posts */
 .wp-block-latest-posts {}
-.aligncenter {}
-.alignwide {} {}
-.alignfull {}
 .wp-block-latest-posts__post-date {}
 .is-grid {}
 .columns-3 {}
@@ -168,8 +155,3 @@
 .wp-block-categories {}
 .wp-block-categories-list {}
 .wp-block-categories-dropdown {}
-.alignleft {}
-.aligncenter {}
-.alignright {}
-.alignwide {}
-.alignfull {}

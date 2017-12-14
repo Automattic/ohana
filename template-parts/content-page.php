@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Nurture_2
+ * @package Ohana
  */
 
 ?>
@@ -14,14 +14,14 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php nurture_2_post_thumbnail(); ?>
+	<?php ohana_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'nurture-2' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ohana' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -34,7 +34,7 @@
 					sprintf(
 						wp_kses(
 							/* translators: %s: Name of current post. Only visible to screen readers */
-							__( 'Edit <span class="screen-reader-text">%s</span>', 'nurture-2' ),
+							__( 'Edit <span class="screen-reader-text">%s</span>', 'ohana' ),
 							array(
 								'span' => array(
 									'class' => array(),

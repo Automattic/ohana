@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package Nurture_2
+ * @package Ohana
  */
 
 /**
@@ -14,11 +14,11 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function nurture_2_jetpack_setup() {
+function ohana_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => 'nurture_2_infinite_scroll_render',
+		'render'    => 'ohana_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
 
@@ -28,7 +28,7 @@ function nurture_2_jetpack_setup() {
 	// Add theme support for Content Options.
 	add_theme_support( 'jetpack-content-options', array(
 		'post-details'    => array(
-			'stylesheet' => 'nurture-2-style',
+			'stylesheet' => 'ohana-style',
 			'date'       => '.posted-on',
 			'categories' => '.cat-links',
 			'tags'       => '.tags-links',
@@ -42,12 +42,12 @@ function nurture_2_jetpack_setup() {
 		),
 	) );
 }
-add_action( 'after_setup_theme', 'nurture_2_jetpack_setup' );
+add_action( 'after_setup_theme', 'ohana_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function nurture_2_infinite_scroll_render() {
+function ohana_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Nurture_2
+ * @package Ohana
  */
 
 ?>
@@ -15,14 +15,14 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'nurture-2' ) ); ?>"><?php
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ohana' ) ); ?>"><?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'nurture-2' ), 'WordPress' );
+				printf( esc_html__( 'Proudly powered by %s', 'ohana' ), 'WordPress' );
 			?></a>
 			<span class="sep"> | </span>
 			<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'nurture-2' ), 'nurture-2', '<a href="http://wordpress.com/themes/" rel="designer">Automattic</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'ohana' ), 'Ohana', '<a href="http://wordpress.com/themes/" rel="designer">Automattic</a>' );
 			?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

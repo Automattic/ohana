@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Nurture_2
+ * @package Ohana
  */
 
 get_header(); ?>

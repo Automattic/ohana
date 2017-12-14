@@ -1,13 +1,13 @@
 <?php
 /**
- * Nurture 2 functions and definitions
+ * Ohana functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Nurture_2
+ * @package Ohana
  */
 
-if ( ! function_exists( 'nurture_2_setup' ) ) :
+if ( ! function_exists( 'ohana_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -15,14 +15,14 @@ if ( ! function_exists( 'nurture_2_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function nurture_2_setup() {
+	function ohana_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Nurture 2, use a find and replace
-		 * to change 'nurture-2' to the name of your theme in all the template files.
+		 * If you're building a theme based on Ohana, use a find and replace
+		 * to change 'ohana' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'nurture-2', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'ohana', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -44,7 +44,7 @@ if ( ! function_exists( 'nurture_2_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'nurture-2' ),
+			'menu-1' => esc_html__( 'Primary', 'ohana' ),
 		) );
 
 		/*
@@ -60,7 +60,7 @@ if ( ! function_exists( 'nurture_2_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'nurture_2_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'ohana_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
@@ -81,7 +81,7 @@ if ( ! function_exists( 'nurture_2_setup' ) ) :
 		) );
 	}
 endif;
-add_action( 'after_setup_theme', 'nurture_2_setup' );
+add_action( 'after_setup_theme', 'ohana_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -90,60 +90,60 @@ add_action( 'after_setup_theme', 'nurture_2_setup' );
  *
  * @global int $content_width
  */
-function nurture_2_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'nurture_2_content_width', 1100 );
+function ohana_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'ohana_content_width', 1100 );
 }
-add_action( 'after_setup_theme', 'nurture_2_content_width', 0 );
+add_action( 'after_setup_theme', 'ohana_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function nurture_2_widgets_init() {
+function ohana_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'nurture-2' ),
+		'name'          => esc_html__( 'Sidebar', 'ohana' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'nurture-2' ),
+		'description'   => esc_html__( 'Add widgets here.', 'ohana' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'nurture_2_widgets_init' );
+add_action( 'widgets_init', 'ohana_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function nurture_2_scripts() {
-	wp_enqueue_style( 'nurture-2-style', get_stylesheet_uri() );
+function ohana_scripts() {
+	wp_enqueue_style( 'ohana-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'nurture-2-block-styles', get_template_directory_uri() . '/assets/stylesheets/blocks.css' );
-	wp_enqueue_style( 'nurture-2-fonts', nurture_2_fonts_url(), array(), null );
+	wp_enqueue_style( 'ohana-block-styles', get_template_directory_uri() . '/assets/stylesheets/blocks.css' );
+	wp_enqueue_style( 'ohana-fonts', ohana_fonts_url(), array(), null );
 
-	wp_enqueue_script( 'nurture-2-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'ohana-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'nurture-2-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'ohana-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'nurture_2_scripts' );
+add_action( 'wp_enqueue_scripts', 'ohana_scripts' );
 
 /**
  * Enqueuing Google Fonts
  */
-function nurture_2_fonts_url() {
+function ohana_fonts_url() {
 	$fonts_url = '';
 
 	/* Translators: If there are characters in your language that are not
 	* supported by Slabo 13px, translate this to 'off'. Do not translate
 	* into your own language.
 	*/
-	$alegreya = esc_html_x( 'on', 'Alegreya font: on or off', 'nurture-2' );
-	$lato = esc_html_x( 'on', 'Lato font: on or off', 'nurture-2' );
+	$alegreya = esc_html_x( 'on', 'Alegreya font: on or off', 'ohana' );
+	$lato = esc_html_x( 'on', 'Lato font: on or off', 'ohana' );
 
 	if ( 'off' !== $alegreya || 'off' !== $lato ) {
 		$font_families = array();

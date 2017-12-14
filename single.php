@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package Nurture_2
+ * @package Ohana
  */
 
 get_header(); ?>

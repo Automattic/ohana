@@ -4,14 +4,14 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Nurture_2
+ * @package Ohana
  */
 
-if ( ! function_exists( 'nurture_2_posted_on' ) ) :
+if ( ! function_exists( 'ohana_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time and author.
 	 */
-	function nurture_2_posted_on() {
+	function ohana_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -26,13 +26,13 @@ if ( ! function_exists( 'nurture_2_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'nurture-2' ),
+			esc_html_x( 'Posted on %s', 'post date', 'ohana' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'nurture-2' ),
+			esc_html_x( 'by %s', 'post author', 'ohana' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -41,36 +41,36 @@ if ( ! function_exists( 'nurture_2_posted_on' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'nurture_2_entry_footer' ) ) :
+if ( ! function_exists( 'ohana_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
-	function nurture_2_entry_footer() {
+	function ohana_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'nurture-2' ) );
+			$categories_list = get_the_category_list( esc_html__( ', ', 'ohana' ) );
 			if ( $categories_list ) {
 				/* translators:
 					1: Categories string,
 					2: Categories icon,
 					3: list of categories. */
 				printf( '<span class="cat-links"><span class="screen-reader-text">%1$s</span> %2$s %3$s</span>',
-						 esc_html__( 'Categories:', 'nurture-2' ),
-						 nurture_2_get_svg( array( 'icon' => 'category' ) ),
+						 esc_html__( 'Categories:', 'ohana' ),
+						 ohana_get_svg( array( 'icon' => 'category' ) ),
 						 $categories_list );
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'nurture-2' ) );
+			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'ohana' ) );
 			if ( $tags_list ) {
 				/* translators:
 					1: Tags string,
 					2: Tags icon,
 					3: list of tags. */
 				printf( '<span class="tags-links"><span class="screen-reader-text">%1$s</span> %2$s %3$s</span>',
-						 esc_html__( 'Tags:', 'nurture-2' ),
-						 nurture_2_get_svg( array( 'icon' => 'tag' ) ),
+						 esc_html__( 'Tags:', 'ohana' ),
+						 ohana_get_svg( array( 'icon' => 'tag' ) ),
 						 $tags_list );
 			}
 		}
@@ -81,7 +81,7 @@ if ( ! function_exists( 'nurture_2_entry_footer' ) ) :
 				sprintf(
 					wp_kses(
 						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'nurture-2' ),
+						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'ohana' ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -98,7 +98,7 @@ if ( ! function_exists( 'nurture_2_entry_footer' ) ) :
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <span class="screen-reader-text">%s</span>', 'nurture-2' ),
+					__( 'Edit <span class="screen-reader-text">%s</span>', 'ohana' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -113,14 +113,14 @@ if ( ! function_exists( 'nurture_2_entry_footer' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'nurture_2_post_thumbnail' ) ) :
+if ( ! function_exists( 'ohana_post_thumbnail' ) ) :
 /**
  * Displays an optional post thumbnail.
  *
  * Wraps the post thumbnail in an anchor element on index views, or a div
  * element when on single views.
  */
-function nurture_2_post_thumbnail() {
+function ohana_post_thumbnail() {
 	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 		return;
 	}
