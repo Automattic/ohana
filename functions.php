@@ -91,7 +91,7 @@ add_action( 'after_setup_theme', 'nurture_2_setup' );
  * @global int $content_width
  */
 function nurture_2_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'nurture_2_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'nurture_2_content_width', 1100 );
 }
 add_action( 'after_setup_theme', 'nurture_2_content_width', 0 );
 
@@ -118,6 +118,8 @@ add_action( 'widgets_init', 'nurture_2_widgets_init' );
  */
 function nurture_2_scripts() {
 	wp_enqueue_style( 'nurture-2-style', get_stylesheet_uri() );
+
+	wp_enqueue_style( 'nurture-2-block-styles', get_template_directory_uri() . '/assets/stylesheets/blocks.css' );
 	wp_enqueue_style( 'nurture-2-fonts', nurture_2_fonts_url(), array(), null );
 
 	wp_enqueue_script( 'nurture-2-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
