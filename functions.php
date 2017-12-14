@@ -140,13 +140,18 @@ function nurture_2_fonts_url() {
 	* supported by Slabo 13px, translate this to 'off'. Do not translate
 	* into your own language.
 	*/
-	$slabo_13px = esc_html_x( 'on', 'Slabo 13px font: on or off', 'nurture-2' );
+	$alegreya = esc_html_x( 'on', 'Alegreya font: on or off', 'nurture-2' );
+	$lato = esc_html_x( 'on', 'Lato font: on or off', 'nurture-2' );
 
-	if ( 'off' !== $slabo_13px ) {
+	if ( 'off' !== $alegreya || 'off' !== $lato ) {
 		$font_families = array();
 
-		if ( 'off' !== $slabo_13px ) {
-			$font_families[] = 'Slabo+13px';
+		if ( 'off' !== $alegreya ) {
+			$font_families[] = 'Alegreya';
+		}
+
+		if ( 'off' !== $lato ) {
+			$font_families[] = 'Lato';
 		}
 
 		$query_args = array(
