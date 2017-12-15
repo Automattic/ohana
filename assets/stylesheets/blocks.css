@@ -139,7 +139,10 @@
 .wp-block-code {}
 
 /* Verse */
-.wp-block-verse {}
+.wp-block-verse {
+	font-family: inherit;
+	font-size: inherit;
+}
 
 /* Separator */
 .wp-block-separator {
