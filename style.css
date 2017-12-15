@@ -345,7 +345,6 @@ body {
 }
 
 hr {
-	background-color: #ccc;
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
@@ -392,7 +391,7 @@ figure {
 table,
 th,
 td {
-	border: 1px solid #d1d1d1;
+	border: 1px solid rgba(0,0,0,.15);
 }
 
 table {
@@ -424,6 +423,11 @@ td {
 th,
 td {
 	padding: 0.4375em;
+}
+
+table tbody > tr:nth-child(odd) > th,
+table tbody > tr:nth-child(odd) > td {
+	background: rgba(0,0,0,.15);
 }
 
 /*--------------------------------------------------------------
@@ -862,7 +866,11 @@ radial-gradient(circle at 0% 50%, transparent 20%, rgba(255,255,255,0.2) 21%, rg
 }
 
 .hentry {
-	padding: 2em 0 0;
+	padding:0;
+}
+
+.entry-header {
+	padding-top: 2em;
 }
 
 /*Grey: #546A76*/
@@ -905,9 +913,12 @@ radial-gradient(circle at 0% 50%, transparent 20%, rgba(255,255,255,0.2) 21%, rg
 .blog article.hentry:nth-of-type(4n+3),
 .archive article.hentry:nth-of-type(4n+3),
 .search article.hentry:nth-of-type(4n+3) {
-	background-color: #99e1d9;
+	background-color: #89D2DC;
 }
 
+.blog article.hentry:nth-of-type(4n+3):before,
+.archive article.hentry:nth-of-type(4n+3):before,
+.search article.hentry:nth-of-type(4n+3):before,
 .blog article.hentry:nth-of-type(4n+3):after,
 .archive article.hentry:nth-of-type(4n+3):after,
 .search article.hentry:nth-of-type(4n+3):after {

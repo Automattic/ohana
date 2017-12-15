@@ -142,7 +142,9 @@
 .wp-block-verse {}
 
 /* Separator */
-.wp-block-separator {}
+.wp-block-separator {
+	border-bottom: 2px dashed rgba(0,0,0,.15);
+}
 
 /* Buttons */
 .wp-block-button {}
