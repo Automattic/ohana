@@ -1043,7 +1043,8 @@ a:hover, a:active {
 ## Single Posts
 --------------------------------------------------------------*/
 
-.single article.hentry {
+.single article.hentry,
+.page article.hentry {
 	background-color: #eef7d2;
 }
 
@@ -1091,6 +1092,13 @@ a:hover, a:active {
 	list-style: none;
 }
 
+.comment-list:after {
+	background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(0,0,0,0.2) 5px, rgba(0,0,0,0.2) 8px, transparent 8px, transparent 10px, rgba(0,0,0,0.2) 10px, rgba(0,0,0,0.2) 13px, transparent 13px, transparent 15px, rgba(0,0,0,0.1) 15px, rgba(0,0,0,0.1) 18px);
+	content: '';
+	display: block;
+	height: 1px;
+}
+
 .comment-content a {
 	word-wrap: break-word;
 }
@@ -1113,7 +1121,7 @@ a:hover, a:active {
 .comment:before,
 .trackback:before,
 .pingback:before {
-	background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(0,0,0,0.2) 5px, rgba(0,0,0,0.2) 8px, transparent 8px, transparent 10px, rgba(0,0,0,0.2) 10px, rgba(0,0,0,0.2) 13px, transparent 13px, transparent 15px, rgba(0,0,0,0.1) 15px, rgba(0,0,0,0.1) 18px);
+	background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(0,0,0,0.2) 5px, rgba(0,0,0,0.2) 8px, transparent 8px, transparent 10px, rgba(0,0,0,0.2) 10px, rgba(0,0,0,0.2) 13px, transparent 13px, transparent 15px, rgba(0,0,0,0.2) 15px, rgba(0,0,0,0.2) 18px);
 	content: '';
 	display: block;
 	height: 1px;
@@ -1217,13 +1225,6 @@ div#respond {
 .comment-respond {
 	padding-top: 1.5em;
 	margin-top: 1.5em;
-}
-
-.comment-respond:before {
-	background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(0,0,0,0.2) 5px, rgba(0,0,0,0.2) 8px, transparent 8px, transparent 10px, rgba(0,0,0,0.2) 10px, rgba(0,0,0,0.2) 13px, transparent 13px, transparent 15px, rgba(0,0,0,0.1) 15px, rgba(0,0,0,0.1) 18px);
-	content: '';
-	display: block;
-	height: 1px;
 }
 
 .comment-reply-link {
