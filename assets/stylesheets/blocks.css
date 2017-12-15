@@ -128,7 +128,9 @@
 .wp-block-pullquote {}
 
 /* Tables */
-.wp-block-table {}
+.wp-block-table {
+	display: table;
+}
 
 /* Preformatted */
 .wp-block-preformatted {}
