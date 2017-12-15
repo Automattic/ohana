@@ -662,16 +662,15 @@ a:hover, a:active {
 	position: absolute;
 	top: 100%;
 	left: -999em;
+	padding: 0.5em 0;
+	text-align: left;
 	width: 220px;
 	z-index: 99999;
 }
 
 .main-navigation ul ul .menu-item-has-children > a > .icon,
 .main-navigation ul ul .page_item_has_children > a > .icon {
-	-ms-transform: rotate(-90deg);
-	-moz-transform: rotate(-90deg);
-	-webkit-transform: rotate(-90deg);
-	transform: rotate(-90deg);
+	display: none;
 }
 
 .main-navigation ul ul li {
@@ -684,20 +683,27 @@ a:hover, a:active {
 
 .main-navigation ul ul a {
 	color: #fff;
+	display: block;
+	padding: 0.3em 0.75em;
 }
 
 .main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
+	border: 0;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 0.7em;
+	padding-left: 1.5em;
+	position: static;
+	width: auto;
 }
 
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
+.main-navigation ul ul ul a {
+	padding: 0.6em 0.75em;
 }
 
-.main-navigation ul ul a {
-	width: 220px;
+.main-navigation ul ul ul a:before {
+	color: #fff;
+	content: "\00B7";
+	margin-right: 0.5em;
 }
 
 .main-navigation ul li:hover > ul,
