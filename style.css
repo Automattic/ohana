@@ -294,7 +294,7 @@ address {
 }
 
 pre {
-	background: #eee;
+	background: rgba(0,0,0,0.15);
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
@@ -437,22 +437,20 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
+	border: 0;
 	border-radius: 3px;
-	background: #e6e6e6;
-	color: rgba(0, 0, 0, 0.8);
-	font-size: 12px;
-	font-size: 0.75rem;
+	background-color: #FC814A;
+	color: #fff;
+	font-weight: bold;
 	line-height: 1;
-	padding: .6em 1em .4em;
+	padding: .6em 1em;
 }
 
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
+	background-color: #c1582a;
 }
 
 button:active, button:focus,
@@ -714,7 +712,7 @@ a:hover, a:active {
 .comment-navigation .nav-links,
 .posts-navigation .nav-links,
 .post-navigation .nav-links {
-	max-width: 1100px;
+	max-width: 750px;
 	margin: auto;
 }
 
@@ -867,7 +865,7 @@ a:hover, a:active {
 .blog article.hentry:nth-of-type(4n+1):after,
 .archive article.hentry:nth-of-type(4n+1):after,
 .search article.hentry:nth-of-type(4n+1):after {
-	background: 
+	background:
 		linear-gradient(#dceab2 50%, rgba(255,255,255,0) 0) 0 0,
 		radial-gradient(circle closest-side, #dceab2 53%, rgba(255,255,255,0) 0) 0 0,
 		radial-gradient(circle closest-side, #dceab2 50%, rgba(255,255,255,0) 0) 25px 0 #FC814A;
@@ -1024,6 +1022,11 @@ a:hover, a:active {
 
 .post-navigation {
 	background: #fc814a;
+	background-image: radial-gradient( rgba(255,255,255, 0.15) 15%, transparent 16%), radial-gradient( rgba(255,255,255, 0.15) 15%, transparent 16%);
+	background-size: 20px 20px;
+	background-position: 0 0, 10px 10px;
+	border-top: 5px solid #fc814a;
+	border-bottom: 5px solid #fc814a;
 	color: #fff;
 	padding: 2em 0;
 }
@@ -1077,9 +1080,17 @@ a:hover, a:active {
 .comment,
 .trackback,
 .pingback {
-	border-top: 1px solid rgba(0,0,0,0.2);;
 	margin-top: 1.5em;
-	padding-top: 1.5em;
+}
+
+.comment:before,
+.trackback:before,
+.pingback:before {
+	background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(0,0,0,0.2) 5px, rgba(0,0,0,0.2) 8px, transparent 8px, transparent 10px, rgba(0,0,0,0.2) 10px, rgba(0,0,0,0.2) 13px, transparent 13px, transparent 15px, rgba(0,0,0,0.1) 15px, rgba(0,0,0,0.1) 18px);
+	content: '';
+	display: block;
+	height: 1px;
+	margin-bottom: 1.5em;
 }
 
 .comment .comment-content {
@@ -1095,23 +1106,33 @@ a:hover, a:active {
 	margin-left: 85px;
 }
 
+.pingback .comment-edit-link,
+.trackback .comment-edit-link {
+	font-size: 0.85em;
+}
+
+.comment-meta .comment-author {
+	font-family: "Alegreya", Georgia, "Times New Roman", serif;
+	font-size: 20px;
+	font-size: 1.25rem;
+	font-weight: normal;
+	margin-left: 85px;
+}
+
 .comment-meta .comment-author .avatar {
 	border: 1px solid rgba(0,0,0,0.2);
 	padding: 3px;
 	border-radius: 50%;
 	display: block;
 	float: left;
+	margin-left: -85px;
 	position: relative;
 	width: 70px;
 	height: 70px;
 }
 
-.comment-meta .comment-author .fn {
-	font-family: "Alegreya", Georgia, "Times New Roman", serif;
-	font-weight: normal;
-	display: block;
-	margin-left: 85px;
-	text-transform: none;
+.comment-meta .comment-author {
+
 }
 
 .bypostauthor > .comment-body:first-of-type .comment-author .avatar {
@@ -1119,15 +1140,19 @@ a:hover, a:active {
 }
 
 .comments-area .edit-link:before {
-	color: #dddddd;
+	color: rgba(0,0,0,0.3);
 	content: "\00B7";
 	display: inline;
-	margin: 0 0.875em 0 0.75em;
+	margin: 0 0.5em 0 0.4em;
 }
 
 .comments-title,
 h3#reply-title {
 	font-size: 1.563em;
+}
+
+.reply {
+	font-size: 0.8em;
 }
 
 
@@ -1163,17 +1188,19 @@ div#respond {
 }
 
 .comment-respond {
-	border-top: 1px solid #dddddd;
 	padding-top: 1.5em;
 	margin-top: 1.5em;
 }
 
-.comment-reply-link {
-	transition: 0.3s;
+.comment-respond:before {
+	background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(0,0,0,0.2) 5px, rgba(0,0,0,0.2) 8px, transparent 8px, transparent 10px, rgba(0,0,0,0.2) 10px, rgba(0,0,0,0.2) 13px, transparent 13px, transparent 15px, rgba(0,0,0,0.1) 15px, rgba(0,0,0,0.1) 18px);
+	content: '';
+	display: block;
+	height: 1px;
 }
 
-.says {
-	display: none;
+.comment-reply-link {
+	transition: 0.3s;
 }
 
 .form-allowed-tags {
@@ -1208,7 +1235,7 @@ div#respond {
 	background: #546A76;
 	color: #fff;
 	font-size: 0.8em;
-	padding: 0.5em 0;
+	padding: 1em 0;
 	text-align: center;
 }
 
