@@ -1092,13 +1092,6 @@ a:hover, a:active {
 	list-style: none;
 }
 
-.comment-list:after {
-	background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(0,0,0,0.2) 5px, rgba(0,0,0,0.2) 8px, transparent 8px, transparent 10px, rgba(0,0,0,0.2) 10px, rgba(0,0,0,0.2) 13px, transparent 13px, transparent 15px, rgba(0,0,0,0.1) 15px, rgba(0,0,0,0.1) 18px);
-	content: '';
-	display: block;
-	height: 1px;
-}
-
 .comment-content a {
 	word-wrap: break-word;
 }
@@ -1118,9 +1111,9 @@ a:hover, a:active {
 	margin-top: 1.5em;
 }
 
-.comment:before,
-.trackback:before,
-.pingback:before {
+.comment:after,
+.trackback:after,
+.pingback:after {
 	background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(0,0,0,0.2) 5px, rgba(0,0,0,0.2) 8px, transparent 8px, transparent 10px, rgba(0,0,0,0.2) 10px, rgba(0,0,0,0.2) 13px, transparent 13px, transparent 15px, rgba(0,0,0,0.2) 15px, rgba(0,0,0,0.2) 18px);
 	content: '';
 	display: block;
@@ -1190,6 +1183,10 @@ h3#reply-title {
 	font-size: 0.8em;
 }
 
+.comment-navigation {
+	font-weight: bold;
+	padding: 1em 0;
+}
 
 /* Respond */
 
