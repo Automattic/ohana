@@ -49,11 +49,19 @@
 	}
 }
 
-.alignfull *,
-.alignwide * {
-	display: block;
+.alignfull > *,
+.alignwide > * {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.alignfull img,
+.alignwide img,
+.alignfull iframe,
+.alignwide iframe,
+.alignfull video,
+.alignwide video {
+	display: block;
 }
 
 .alignfull .jetpack-video-wrapper iframe,

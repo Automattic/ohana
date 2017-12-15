@@ -265,7 +265,7 @@ input,
 select,
 optgroup,
 textarea {
-	color: #5d576b;
+	color: #444444;
 	font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 18px;
 	font-size: 1.125rem;
@@ -595,7 +595,7 @@ a:hover, a:active {
 }
 
 .main-navigation ul li:after {
-	content: "\00b7"; 
+	content: "\00b7";
 	color: #fff;
 	opacity: 0.5;
 	display: inline-block;
@@ -619,6 +619,10 @@ a:hover, a:active {
 	top: 100%;
 	left: -999em;
 	z-index: 99999;
+}
+
+.main-navigation ul ul a {
+	color: #5d576b;
 }
 
 .main-navigation ul ul ul {
@@ -803,7 +807,7 @@ a:hover, a:active {
 }
 
 .hentry {
-	padding: 2em 0 3em;
+	padding: 2em 0 0;
 }
 
 /*Grey: #546A76*/
@@ -812,22 +816,25 @@ a:hover, a:active {
 .blog article.hentry:nth-of-type(5n+1),
 .archive article.hentry:nth-of-type(5n+1),
 .search article.hentry:nth-of-type(5n+1) {
+	background:
+radial-gradient(circle at 100% 50%, transparent 20%, rgba(255,255,255,0.2) 21%, rgba(255,255,255,0.2) 34%, transparent 35%, transparent),
+radial-gradient(circle at 0% 50%, transparent 20%, rgba(255,255,255,0.2) 21%, rgba(255,255,255,0.2) 34%, transparent 35%, transparent) 0 -50px;
 	background-color: #dceab2;
-	padding-bottom: 0;
+	background-size: 24px 33px;
+	position: relative;
 }
 
 .blog article.hentry:nth-of-type(5n+1):after,
 .archive article.hentry:nth-of-type(5n+1):after,
 .search article.hentry:nth-of-type(5n+1):after {
-	background:
-		linear-gradient(#dceab2 50%, rgba(255,255,255,0) 0) 0 0,
-		radial-gradient(circle closest-side, #dceab2 53%, rgba(255,255,255,0) 0) 0 0,
-		radial-gradient(circle closest-side, #dceab2 50%, rgba(255,255,255,0) 0) 55px 0 #FC814A;
-		background-size:110px 110px;
-	background-repeat:repeat-x;
+	background: linear-gradient(#dceab2 50%, rgba(255,255,255,0) 0) 0 0,
+radial-gradient(circle closest-side, #dceab2 53%, rgba(255,255,255,0) 0) 0 0,
+radial-gradient(circle closest-side, #dceab2 50%, rgba(255,255,255,0) 0) 25px 0 #FC814A;
+	background-size: 50px;
+	background-repeat: repeat-x;
 	content: '';
 	display: block;
-	height: 100px;
+	height: 50px;
 }
 
 /* Orange */
@@ -835,7 +842,6 @@ a:hover, a:active {
 .archive article.hentry:nth-of-type(5n+2),
 .search article.hentry:nth-of-type(5n+2) {
 	background-color: #fc814a;
-	padding-bottom: 0;
 }
 
 .blog article.hentry:nth-of-type(5n+2):after,
@@ -845,7 +851,6 @@ a:hover, a:active {
 	content: '';
 	display: block;
 	height: 25px;
-	margin-top: 50px;
 }
 
 /* Green */
@@ -864,6 +869,10 @@ a:hover, a:active {
 .archive article.hentry:nth-of-type(5n+4),
 .search article.hentry:nth-of-type(5n+4) {
 	background-color: #5d576b;
+	background-image: radial-gradient(closest-side, transparent 98%, rgba(0,0,0,0.1) 99%),
+	radial-gradient(closest-side, transparent 98%, rgba(0,0,0,0.1) 99%);
+	background-size:30px 30px;
+	background-position:0 0, 15px 15px;
 }
 
 /* Off-white */
@@ -871,8 +880,21 @@ a:hover, a:active {
 .archive article.hentry:nth-of-type(5n+5),
 .search article.hentry:nth-of-type(5n+5) {
 	background-color: #fcfcfc;
+	background-image:
+radial-gradient(circle at 100% 150%, #fcfcfc 24%, #f6f6f6 25%, #f6f6f6 28%, #fcfcfc 29%, #fcfcfc 36%, #f6f6f6 36%, #f6f6f6 40%, transparent 40%, transparent),
+radial-gradient(circle at 0 150%, #fcfcfc 24%, #f6f6f6 25%, #f6f6f6 28%, #fcfcfc 29%, #fcfcfc 36%, #f6f6f6 36%, #f6f6f6 40%, transparent 40%, transparent),
+radial-gradient(circle at 50% 100%, #f6f6f6 10%, #fcfcfc 11%, #fcfcfc 23%, #f6f6f6 24%, #f6f6f6 30%, #fcfcfc 31%, #fcfcfc 43%, #f6f6f6 44%, #f6f6f6 50%, #fcfcfc 51%, #fcfcfc 63%, #f6f6f6 64%, #f6f6f6 71%, transparent 71%, transparent),
+radial-gradient(circle at 100% 50%, #f6f6f6 5%, #fcfcfc 6%, #fcfcfc 15%, #f6f6f6 16%, #f6f6f6 20%, #fcfcfc 21%, #fcfcfc 30%, #f6f6f6 31%, #f6f6f6 35%, #fcfcfc 36%, #fcfcfc 45%, #f6f6f6 46%, #f6f6f6 49%, transparent 50%, transparent),
+radial-gradient(circle at 0 50%, #f6f6f6 5%, #fcfcfc 6%, #fcfcfc 15%, #f6f6f6 16%, #f6f6f6 20%, #fcfcfc 21%, #fcfcfc 30%, #f6f6f6 31%, #f6f6f6 35%, #fcfcfc 36%, #fcfcfc 45%, #f6f6f6 46%, #f6f6f6 49%, transparent 50%, transparent);
+	background-size: 50px 25px;
 }
 
+.blog article.hentry:nth-of-type(5n+2),
+.archive article.hentry:nth-of-type(5n+2),
+.search article.hentry:nth-of-type(5n+2),
+.blog article.hentry:nth-of-type(5n+2) a,
+.archive article.hentry:nth-of-type(5n+2) a,
+.search article.hentry:nth-of-type(5n+2) a,
 .blog article.hentry:nth-of-type(5n+4),
 .archive article.hentry:nth-of-type(5n+4),
 .search article.hentry:nth-of-type(5n+4),
@@ -888,18 +910,9 @@ a:hover, a:active {
 
 .page-content,
 .entry-content,
-.entry-summary {
-	margin-top: 1.5em;
-}
-
-.entry-header,
-.entry-footer,
-.page-header,
+.entry-summary,
 .post-thumbnail {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 750px;
+	margin-top: 1.5em;
 }
 
 /* Entry headers */
@@ -922,17 +935,18 @@ a:hover, a:active {
 	font-size: 0.9em;
 }
 
-/* Entry content and blocks */
+/* Entry content */
 
 .entry-header,
 .entry-content,
+.entry-summary,
 .entry-footer,
 .page-header,
-.page-content {
+.page-content,
+.post-thumbnail {
 	max-width: 750px;
 	margin-left: auto;
 	margin-right: auto;
-
 }
 
 /* Entry footer */
@@ -945,6 +959,7 @@ a:hover, a:active {
 .entry-footer {
 	font-size: 0.9em;
 	font-family: Alegreya;
+	padding-bottom: 4em;
 }
 
 .entry-footer:before {
@@ -1116,138 +1131,3 @@ object {
 .gallery-caption {
 	display: block;
 }
-
-/*--------------------------------------------------------------
-## Gutenberg Styles
---------------------------------------------------------------*/
-
-/* Dropcaps */
-.has-drop-cap {}
-.has-drop-cap.alignleft {}
-.has-drop-cap.aligncenter {}
-.has-drop-cap.alignright {}
-.has-drop-cap.alignwide {}
-.has-drop-cap.alignfull {}
-
-/* Images */
-.wp-block-image {}
-.wp-block-image.alignleft {}
-.wp-block-image.aligncenter {}
-.wp-block-image.alignright {}
-.wp-block-image.alignwide {}
-.wp-block-image.alignfull {}
-
-/* Galleries */
-.wp-block-gallery {}
-.wp-block-gallery.alignleft {}
-.wp-block-gallery.aligncenter {}
-.wp-block-gallery.alignright {}
-.wp-block-gallery.alignwide {}
-.wp-block-gallery.alignfull {}
-.wp-block-gallery.columns-1 {}
-.wp-block-gallery.columns-2 {}
-.wp-block-gallery.columns-3 {}
-.wp-block-gallery.columns-4 {}
-.wp-block-gallery.columns-5 {}
-
-/* Blockquotes*/
-.wp-block-quote {}
-.wp-block-quote.blocks-quote-style-1 {}
-.wp-block-quote.blocks-quote-style-2 {}
-
-/* Cover Images */
-.wp-block-cover-image {}
-.wp-block-cover-image.has-background-dim {}
-.wp-block-cover-image.has-parallax {}
-
-/* Video */
-.wp-block-video {}
-.wp-block-video.alignleft {}
-.wp-block-video.aligncenter {}
-.wp-block-video.alignright {}
-.wp-block-video.alignwide {}
-.wp-block-video.alignfull {}
-
-/* Audio */
-.wp-block-audio {}
-.wp-block-audio.alignleft {}
-.wp-block-audio.aligncenter {}
-.wp-block-audio.alignright {}
-.wp-block-audio.alignwide {}
-.wp-block-audio.alignfull {}
-
-/* Pullquotes */
-.wp-block-pullquote {}
-.wp-block-pullquote.alignleft {}
-.wp-block-pullquote.aligncenter {}
-.wp-block-pullquote.alignright {}
-.wp-block-pullquote.alignwide {}
-.wp-block-pullquote.alignfull {}
-
-/* Tables */
-.wp-block-table {}
-.wp-block-table.alignleft {}
-.wp-block-table.aligncenter {}
-.wp-block-table.alignright {}
-.wp-block-table.alignwide {}
-.wp-block-table.alignfull {}
-
-/* Preformatted */
-.wp-block-preformatted {}
-.alignleft {}
-.aligncenter {}
-.alignright {}
-.alignwide {}
-
-/* Code */
-.wp-block-code {}
-.alignleft {}
-.aligncenter {}
-.alignright {}
-.alignwide {} {}
-.alignfull {}
-
-/* Verse */
-.wp-block-verse {}
-
-/* Separator */
-.wp-block-separator {}
-
-/* Buttons */
-.wp-block-button {}
-.alignleft {}
-.aligncenter {}
-.alignright {}
-.alignwide {}
-.alignfull {}
-
-/* Text Columns */
-.wp-block-text-columns {}
-.wp-block-column {}
-.aligncenter {}
-.alignwide {}
-.alignfull {}
-.columns-1 {}
-.columns-2 {}
-.columns-3 {}
-.columns-4 {}
-
-/* Latest Posts */
-.wp-block-latest-posts {}
-.aligncenter {}
-.alignwide {} {}
-.alignfull {}
-.wp-block-latest-posts__post-date {}
-.is-grid {}
-.columns-3 {}
-
-/* Categories */
-.wp-block-categories {}
-.wp-block-categories-list {}
-.wp-block-categories-dropdown {}
-.alignleft {}
-.aligncenter {}
-.alignright {}
-.alignwide {}
-.alignfull {}
-
