@@ -583,7 +583,7 @@ a:hover, a:active {
 #site-navigation ul {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 1100px;
+	max-width: 92%;
 }
 
 .site-title {
@@ -739,7 +739,7 @@ a:hover, a:active {
 .comment-navigation .nav-links,
 .posts-navigation .nav-links,
 .post-navigation .nav-links {
-	max-width: 750px;
+	max-width: 92%;
 	margin: auto;
 }
 
@@ -1003,7 +1003,7 @@ a:hover, a:active {
 .page-header,
 .page-content,
 .post-thumbnail {
-	max-width: 750px;
+	max-width: 92%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -1048,12 +1048,12 @@ a:hover, a:active {
 }
 
 .post-navigation {
-	background: #fc814a;
+	background: #88AB75;
 	background-image: radial-gradient( rgba(255,255,255, 0.15) 15%, transparent 16%), radial-gradient( rgba(255,255,255, 0.15) 15%, transparent 16%);
 	background-size: 20px 20px;
 	background-position: 0 0, 10px 10px;
-	border-top: 5px solid #fc814a;
-	border-bottom: 5px solid #fc814a;
+	border-top: 15px solid #88AB75;
+	border-bottom: 15px solid #88AB75;
 	color: #fff;
 	padding: 2em 0;
 }
@@ -1083,7 +1083,7 @@ a:hover, a:active {
 .comments-title {
 	margin: 0 auto;
 	padding: 0;
-	max-width: 750px;
+	max-width: 92%;
 }
 
 .comment-list,
@@ -1194,7 +1194,7 @@ div#respond {
 .comment-form {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 750px;
+	max-width: 92%;
 }
 
 .comment div#respond {
@@ -1272,7 +1272,34 @@ div#respond {
 
 .site-info {
 	margin: 0 auto;
-	max-width: 1100px;
+	max-width: 92%;
+}
+
+@media all and (min-width:768px) {
+	.entry-header,
+	.entry-content,
+	.entry-summary,
+	.entry-footer,
+	.page-header,
+	.page-content,
+	.post-thumbnail,
+	.comment-navigation .nav-links,
+	.posts-navigation .nav-links,
+	.post-navigation .nav-links,
+	.comment-list,
+	.comments-title,
+	.comment-reply-title,
+	.comment-form {
+		max-width: 750px;
+	}
+}
+@media all and (min-width: 1200px) {
+	.site-branding,
+	#site-navigation ul,
+	.site-info {
+		margin: 0 auto;
+		max-width: 1100px;
+	}
 }
 
 /*--------------------------------------------------------------
