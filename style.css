@@ -517,7 +517,7 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: #5d576b;
+	color: #222222;
 	text-decoration: none;
 }
 
@@ -704,14 +704,13 @@ a:hover, a:active {
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
-	margin-bottom: 1.5em;
 	overflow: hidden;
 }
 
 .comment-navigation .nav-links,
 .posts-navigation .nav-links,
 .post-navigation .nav-links {
-	max-width: 750px;
+	max-width: 1100px;
 	margin: auto;
 }
 
@@ -728,23 +727,6 @@ a:hover, a:active {
 	float: right;
 	text-align: right;
 	width: 50%;
-}
-
-.post-navigation {
-	background:
-radial-gradient(circle at 100% 50%, transparent 20%, rgba(255,255,255,0.2) 21%, rgba(255,255,255,0.2) 34%, transparent 35%, transparent),
-radial-gradient(circle at 0% 50%, transparent 20%, rgba(255,255,255,0.2) 21%, rgba(255,255,255,0.2) 34%, transparent 35%, transparent) 0 -50px;
-	background-color: #dceab2;
-	background-size: 24px 33px;
-	border-top: 6px solid #c8d5a1;
-	border-bottom: 2px solid #c8d5a1;
-	padding: 3em 0;
-}
-
-.post-navigation .nav-subtitle {
-	font-size: 0.8;
-	font-weight: bold;
-	display: block;
 }
 
 /*--------------------------------------------------------------
@@ -1013,7 +995,7 @@ radial-gradient(circle at 0 50%, #f6f6f6 5%, #fcfcfc 6%, #fcfcfc 15%, #f6f6f6 16
 
 .entry-footer {
 	font-size: 0.9em;
-	font-family: Alegreya;
+	font-family: "Alegreya", Georgia, "Times New Roman", serif;
 	padding-bottom: 4em;
 }
 
@@ -1036,19 +1018,178 @@ radial-gradient(circle at 0 50%, #f6f6f6 5%, #fcfcfc 6%, #fcfcfc 15%, #f6f6f6 16
 }
 
 /*--------------------------------------------------------------
+## Single Posts
+--------------------------------------------------------------*/
+
+.single article.hentry {
+	background-color: #eef7d2;
+}
+
+.post-navigation {
+	background: #fc814a;
+	color: #fff;
+	padding: 2em 0;
+}
+
+.post-navigation a {
+	color: #fff;
+}
+
+.post-navigation .nav-subtitle {
+	color: rgba(255,255,255,0.8);
+	font-size: 0.8em;
+	font-weight: bold;
+	display: block;
+}
+
+
+/*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
 
 .comments-area {
+	background-color: #c1e7ec;
+	padding: 2em 0;
+}
+
+.comment-list,
+.comments-title {
 	margin: 0 auto;
+	padding: 0;
 	max-width: 750px;
 }
+
+.comment-list,
+.comment-list .children {
+	list-style: none;
+}
+
 .comment-content a {
 	word-wrap: break-word;
 }
 
-.bypostauthor {
+.comment-list .children {
+	margin-left: 2.25em;
+}
+
+.comment-list > .comment:first-of-type {
+	border-top: 0;
+	padding-top: 0;
+}
+
+.comment,
+.trackback,
+.pingback {
+	border-top: 1px solid rgba(0,0,0,0.2);;
+	margin-top: 1.5em;
+	padding-top: 1.5em;
+}
+
+.comment .comment-content {
+	margin-top: 1.5em;
+}
+
+.comment-meta {
 	display: block;
+}
+
+.comment-meta .comment-metadata {
+	font-size: 0.85em;
+	margin-left: 85px;
+}
+
+.comment-meta .comment-author .avatar {
+	border: 1px solid rgba(0,0,0,0.2);
+	padding: 3px;
+	border-radius: 50%;
+	display: block;
+	float: left;
+	position: relative;
+	width: 70px;
+	height: 70px;
+}
+
+.comment-meta .comment-author .fn {
+	font-family: "Alegreya", Georgia, "Times New Roman", serif;
+	font-weight: normal;
+	display: block;
+	margin-left: 85px;
+	text-transform: none;
+}
+
+.bypostauthor > .comment-body:first-of-type .comment-author .avatar {
+	border-color: #C7D66D;
+}
+
+.comments-area .edit-link:before {
+	color: #dddddd;
+	content: "\00B7";
+	display: inline;
+	margin: 0 0.875em 0 0.75em;
+}
+
+.comments-title,
+h3#reply-title {
+	font-size: 1.563em;
+}
+
+
+/* Respond */
+
+div#respond {
+	margin: 1.5em 0 0;
+	padding: 1.5em 0 0;
+}
+
+.comment-reply-title,
+.comment-form {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 750px;
+}
+
+.comment div#respond {
+	padding-top: 0;
+}
+
+.comment-form label {
+	display: inline-block;
+	width: 109px;
+}
+
+.comment-form-author,
+.comment-form-email,
+.comment-form-url,
+.comment-form-comment {
+	margin: 0 0 1.5em;
+	position: relative;
+}
+
+.comment-respond {
+	border-top: 1px solid #dddddd;
+	padding-top: 1.5em;
+	margin-top: 1.5em;
+}
+
+.comment-reply-link {
+	transition: 0.3s;
+}
+
+.says {
+	display: none;
+}
+
+.form-allowed-tags {
+	color: #bbbbbb;
+}
+
+.no-comments {
+	font-style: italic;
+	text-align: center;
+}
+
+.required {
+	color: #f78769;
 }
 
 /*--------------------------------------------------------------
@@ -1067,7 +1208,7 @@ radial-gradient(circle at 0 50%, #f6f6f6 5%, #fcfcfc 6%, #fcfcfc 15%, #f6f6f6 16
 }
 
 .site-footer {
-	background: #2D93AD;
+	background: #546A76;
 	color: #fff;
 	font-size: 0.8em;
 	padding: 0.5em 0;
