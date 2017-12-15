@@ -624,7 +624,6 @@ a:hover, a:active {
 	display: none;
 	list-style: none;
 	margin: 0;
-	overflow: hidden;
 	padding-left: 0;
 }
 
@@ -647,16 +646,44 @@ a:hover, a:active {
 	padding: 0.5em 0.75em;
 }
 
+.main-navigation li a:hover,
+.main-navigation li a:focus,
+.main-navigation li a:active {
+	color: #FC814A;
+}
+
+.main-navigation ul a .icon {
+	margin-left: 6px;
+}
+
 .main-navigation ul ul {
-	background-color: #fff;
+	background-color: #455761;
+	border: 2px solid #fff;
 	position: absolute;
 	top: 100%;
 	left: -999em;
+	width: 220px;
 	z-index: 99999;
 }
 
+.main-navigation ul ul .menu-item-has-children > a > .icon,
+.main-navigation ul ul .page_item_has_children > a > .icon {
+	-ms-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+
+.main-navigation ul ul li {
+	border-bottom: 1px dashed rgba(255,255,255,0.5);
+}
+
+.main-navigation ul ul li:last-child {
+	border: none;
+}
+
 .main-navigation ul ul a {
-	color: #5d576b;
+	color: #fff;
 }
 
 .main-navigation ul ul ul {
@@ -670,7 +697,7 @@ a:hover, a:active {
 }
 
 .main-navigation ul ul a {
-	width: 200px;
+	width: 220px;
 }
 
 .main-navigation ul li:hover > ul,
@@ -885,7 +912,7 @@ a:hover, a:active {
 	radial-gradient( rgba(255,255,255, 0.15) 15%, transparent 16%);
 	background-size:20px 20px;
 	background-position: 0 0, 10px 10px;
-	border-top: 25px solid #fc814a;
+	border-top: 15px solid #fc814a;
 	border-bottom: 25px solid #fc814a;
 }
 
