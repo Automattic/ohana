@@ -486,10 +486,12 @@ textarea {
 --------------------------------------------------------------*/
 a {
 	color: #5d576b;
+	text-decoration: none;
 }
 
 a:hover, a:focus, a:active {
 	color: #5d576b;
+	text-decoration: none;
 }
 
 a:focus {
@@ -590,6 +592,19 @@ a:hover, a:active {
 	margin: 0;
 	overflow: hidden;
 	padding-left: 0;
+}
+
+.main-navigation ul li:after {
+	content: "\00b7"; 
+	color: #fff;
+	opacity: 0.5;
+	display: inline-block;
+}
+
+
+.main-navigation ul ul li:after,
+.main-navigation ul li:last-child:after {
+	display: none;
 }
 
 .main-navigation ul a {
@@ -840,8 +855,8 @@ a:hover, a:active {
 	background-color: #99e1d9;
 	background-image: radial-gradient( rgba(255,255,255, 0.15) 15%, transparent 16%),
 	radial-gradient( rgba(255,255,255, 0.15) 15%, transparent 16%);
-	background-size:30px 30px;
-	background-position: 0 0, 15px 15px;
+	background-size:20px 20px;
+	background-position: 0 0, 10px 10px;
 }
 
 /* Purple */
@@ -890,6 +905,8 @@ a:hover, a:active {
 /* Entry headers */
 
 .entry-title {
+	font-size: 32px;
+	font-size: 2rem;
 	margin-bottom: 0;
 }
 
@@ -927,6 +944,17 @@ a:hover, a:active {
 
 .entry-footer {
 	font-size: 0.9em;
+	font-family: Alegreya;
+}
+
+.entry-footer:before {
+	content: '{';
+	display: inline-block;
+}
+
+.entry-footer:after {
+	content: '}';
+	display: inline-block;
 }
 
 .entry-footer > span {
