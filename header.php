@@ -43,7 +43,13 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ohana' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+				<?php
+					echo ohana_get_svg( array( 'icon' => 'menu' ) );
+					echo ohana_get_svg( array( 'icon' => 'close' ) );
+					esc_html_e( 'Menu', 'ohana' );
+				?>
+			</button>
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
