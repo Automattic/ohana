@@ -958,10 +958,6 @@ a:hover, a:active {
 }
 
 .hentry {
-	padding:0;
-}
-
-.entry-header {
 	padding-top: 2em;
 }
 
@@ -988,6 +984,22 @@ a:hover, a:active {
 	height: 50px;
 }
 
+.hentry:nth-of-type(4n+1) .entry-header,
+.hentry:nth-of-type(4n+1) .entry-header:before,
+.hentry:nth-of-type(4n+1) .entry-header:after {
+	background-color: #c8d69f;
+}
+
+.hentry:nth-of-type(4n+1) .entry-title:before,
+.hentry:nth-of-type(4n+1) .page-title:before {
+	border-color: #c8d69f transparent transparent transparent;
+}
+
+.hentry:nth-of-type(4n+1) .entry-title:after,
+.hentry:nth-of-type(4n+1) .page-title:after {
+	border-color: transparent transparent #c8d69f transparent;
+}
+
 /* Orange */
 .blog article.hentry:nth-of-type(4n+2),
 .archive article.hentry:nth-of-type(4n+2),
@@ -999,6 +1011,22 @@ a:hover, a:active {
 	background-position: 0 0, 10px 10px;
 	border-top: 15px solid #fc814a;
 	border-bottom: 25px solid #fc814a;
+}
+
+.hentry:nth-of-type(4n+2) .entry-header,
+.hentry:nth-of-type(4n+2) .entry-header:before,
+.hentry:nth-of-type(4n+2) .entry-header:after {
+	background-color: #eb7039;
+}
+
+.hentry:nth-of-type(4n+2) .entry-title:before,
+.hentry:nth-of-type(4n+2) .page-title:before {
+	border-color: #eb7039 transparent transparent transparent;
+}
+
+.hentry:nth-of-type(4n+2) .entry-title:after,
+.hentry:nth-of-type(4n+2) .page-title:after {
+	border-color: transparent transparent #eb7039 transparent;
 }
 
 /* Blue */
@@ -1018,6 +1046,24 @@ a:hover, a:active {
 	content: '';
 	display: block;
 	height: 25px;
+	position: relative;
+	top: -2em;
+}
+
+.hentry:nth-of-type(4n+3) .entry-header,
+.hentry:nth-of-type(4n+3) .entry-header:before,
+.hentry:nth-of-type(4n+3) .entry-header:after {
+	background-color: #9ee3ec;
+}
+
+.hentry:nth-of-type(4n+3) .entry-title:before,
+.hentry:nth-of-type(4n+3) .page-title:before {
+	border-color: #9ee3ec transparent transparent transparent;
+}
+
+.hentry:nth-of-type(4n+3) .entry-title:after,
+.hentry:nth-of-type(4n+3) .page-title:after {
+	border-color: transparent transparent #9ee3ec transparent;
 }
 
 /* Dark Green */
@@ -1045,6 +1091,22 @@ a:hover, a:active {
 .archive article.hentry:nth-of-type(4n+4) .entry-content a,
 .search article.hentry:nth-of-type(4n+4) .entry-content a {
 	color: #fff;
+}
+
+.hentry:nth-of-type(4n+4) .entry-header,
+.hentry:nth-of-type(4n+4) .entry-header:before,
+.hentry:nth-of-type(4n+4) .entry-header:after {
+	background-color: #6f945b;
+}
+
+.hentry:nth-of-type(4n+4) .entry-title:before,
+.hentry:nth-of-type(4n+4) .page-title:before {
+	border-color: #6f945b transparent transparent transparent;
+}
+
+.hentry:nth-of-type(4n+4) .entry-title:after,
+.hentry:nth-of-type(4n+4) .page-title:after {
+	border-color: transparent transparent #6f945b transparent;
 }
 
 .updated:not(.published) {
@@ -1085,6 +1147,80 @@ a:hover, a:active {
 
 /* Entry content */
 
+/* Ribbon behind headers */
+
+.entry-header,
+.page-header {
+	background-color: #fff;
+	padding: 0 0 0.5em;
+	position: relative;
+}
+
+.entry-header:before,
+.page-header:before,
+.entry-header:after,
+.page-header:after {
+	background-color: #fff;
+	bottom: 0;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -5%;
+	width: 5%;
+}
+
+.entry-header:after,
+.page-header:after {
+	left: auto;
+	right: -5%;
+}
+
+.entry-title,
+.page-title {
+	position: static;
+}
+
+.entry-title:before,
+.page-title:before,
+.entry-title:after,
+.page-title:after {
+	border-style: solid;
+	content: "";
+	display: none;
+	height: 0;
+	left: 100%;
+	position: absolute;
+	width: 0;
+}
+
+.entry-title:before,
+.page-title:before {
+	border-width: 40px 40px 0 0;
+	border-color: #fff transparent transparent transparent;
+	top: 0;
+}
+
+.entry-title:after,
+.page-title:after {
+	border-width: 0 40px 40px 0;
+	border-color: transparent transparent #fff transparent;
+	bottom: 0;
+}
+
+@media screen and (min-width: 37.5em) {
+	.entry-header:after,
+	.page-header:after {
+		display: none;
+	}
+
+	.entry-title:before,
+	.page-title:before,
+	.entry-title:after,
+	.page-title:after {
+		display: block;
+	}
+}
+
 .entry-header,
 .entry-content,
 .entry-summary,
@@ -1123,7 +1259,6 @@ a:hover, a:active {
 .search article.hentry:nth-of-type(4n+1) .entry-footer,
 .search article.hentry:nth-of-type(4n+1) .entry-meta {
 	color: #CF6A3D;
-
 }
 
 .blog article.hentry:nth-of-type(4n+2) a,

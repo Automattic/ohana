@@ -46,7 +46,7 @@
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 				<?php
 					echo ohana_get_svg( array( 'icon' => 'menu' ) );
-					echo ohana_get_svg( array( 'icon' => 'close' ) );
+					echo Ohana_get_svg( array( 'icon' => 'close' ) );
 					esc_html_e( 'Menu', 'ohana' );
 				?>
 			</button>
