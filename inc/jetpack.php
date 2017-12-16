@@ -17,10 +17,11 @@
 function ohana_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
-		'container' => 'main',
-		'render'    => 'ohana_infinite_scroll_render',
-		'footer'    => 'page',
-		'wrapper'   => false,
+		'container'      => 'main',
+		'render'         => 'ohana_infinite_scroll_render',
+		'footer'         => 'page',
+		'wrapper'        => false,
+		'footer_widgets' => 'sidebar-1',
 	) );
 
 	// Add theme support for Responsive Videos.

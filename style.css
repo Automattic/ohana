@@ -352,6 +352,7 @@ hr {
 
 ul, ol {
 	margin: 0 0 1.5em 3em;
+	padding: 0;
 }
 
 ul {
@@ -956,6 +957,33 @@ a:hover, a:active {
 	max-width: 100%;
 }
 
+.widget-area {
+	background: #546A76;
+	background: radial-gradient(circle farthest-side at 0% 50%,#637782 23.5%,rgba(240,166,17,0) 0)21px 30px, radial-gradient(circle farthest-side at 0% 50%,#546a76 24%,rgba(240,166,17,0) 0)19px 30px, linear-gradient(#637782 14%,rgba(240,166,17,0) 0, rgba(240,166,17,0) 85%,#637782 0)0 0, linear-gradient(150deg,#637782 24%,#546a76 0,#546a76 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#546a76 0,#546a76 76%,#637782 0)0 0, linear-gradient(30deg,#637782 24%,#546a76 0,#546a76 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#546a76 0,#546a76 76%,#637782 0)0 0, linear-gradient(90deg,#546a76 2%,#637782 0,#637782 98%,#546a76 0%)0 0 #637782;
+	background-size: auto auto, auto auto, auto auto, auto auto, auto auto, auto auto;
+	background-size: 40px 60px;
+	color: #fff;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 2em 4%;
+}
+
+.widget-area a {
+	color: #fff;
+}
+
+.widget-area .widget {
+	padding: 0 1em;
+	width: 33.3333%;
+}
+
+.widget:not(.widget_text) ul,
+.widget:not(.widget_text) ol {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -996,17 +1024,17 @@ a:hover, a:active {
 .hentry:nth-of-type(4n+1) .entry-header,
 .hentry:nth-of-type(4n+1) .entry-header:before,
 .hentry:nth-of-type(4n+1) .entry-header:after {
-	background-color: #c8d69f;
+	background-color: #cedca5;
 }
 
 .hentry:nth-of-type(4n+1) .entry-title:before,
 .hentry:nth-of-type(4n+1) .page-title:before {
-	border-color: #c8d69f transparent transparent transparent;
+	border-color: #cedca5 transparent transparent transparent;
 }
 
 .hentry:nth-of-type(4n+1) .entry-title:after,
 .hentry:nth-of-type(4n+1) .page-title:after {
-	border-color: transparent transparent #c8d69f transparent;
+	border-color: transparent transparent #cedca5 transparent;
 }
 
 /* Orange */
@@ -1056,6 +1084,11 @@ a:hover, a:active {
 	display: block;
 	height: 25px;
 	position: relative;
+}
+
+.blog article.hentry:nth-of-type(4n+3):before,
+.archive article.hentry:nth-of-type(4n+3):before,
+.search article.hentry:nth-of-type(4n+3):before {
 	top: -2em;
 }
 
@@ -1583,6 +1616,12 @@ div#respond {
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
 .infinity-end.neverending .site-footer {
 	display: block;
+}
+
+#infinite-handle {
+	background-color: #546a76;
+	padding: 1em 0;
+	text-align: center;
 }
 
 .site-footer {
