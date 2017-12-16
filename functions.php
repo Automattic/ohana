@@ -79,6 +79,24 @@ if ( ! function_exists( 'ohana_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+		/**
+		 * Add support for Gutenberg.
+		 *
+		 * @link https://wordpress.org/gutenberg/handbook/reference/theme-support/
+		 */
+		add_theme_support( 'gutenberg', array(
+			'wide-images' => true,
+			'colors' => array(
+				'#dceab2',
+				'#fc814a',
+				'#89D2DC',
+				'#88AB75',
+			),
+		) );
+
+add_action( 'after_setup_theme', 'mytheme_setup_theme_supported_features' );
+
 	}
 endif;
 add_action( 'after_setup_theme', 'ohana_setup' );
@@ -95,9 +113,12 @@ function ohana_content_width() {
 }
 add_action( 'after_setup_theme', 'ohana_content_width', 0 );
 
+/**
+ * Enqueue editor styles for Gutenberg
+ */
 function ohana_editor_styles() {
-	wp_enqueue_style( 'ohana-editor-style', get_template_directory_uri() . 'assets/stylesheets/editor-style.css' );
-	wp_enqueue_style( 'ohana-block-editor-style', get_template_directory_uri() . 'assets/stylesheets/blocks.css' );
+	wp_enqueue_style( 'ohana-editor-style', get_template_directory_uri() . '/assets/stylesheets/editor-style.css' );
+	wp_enqueue_style( 'ohana-block-editor-style', get_template_directory_uri() . '/assets/stylesheets/blocks.css' );
 	wp_enqueue_style( 'ohana-fonts', ohana_fonts_url(), array(), null );
 
 }
