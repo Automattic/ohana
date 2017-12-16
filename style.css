@@ -556,7 +556,7 @@ a:hover, a:active {
 		linear-gradient(150deg,#637782 24%,#546a76 0,#546a76 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#546a76 0,#546a76 76%,#637782 0)0 0,
 		linear-gradient(30deg,#637782 24%,#546a76 0,#546a76 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#546a76 0,#546a76 76%,#637782 0)0 0,
 		linear-gradient(90deg,#546a76 2%,#637782 0,#637782 98%,#546a76 0%)0 0 #637782;
-		background-size:40px 60px;
+	background-size:40px 60px;
 	border-top: 10px solid #546A76;
 }
 
@@ -1184,6 +1184,29 @@ a:hover, a:active {
 
 .entry-footer > span:last-child {
 	margin-right: 0;
+}
+
+.posts-navigation {
+	background: #546A76;
+	background:
+		radial-gradient(circle farthest-side at 0% 50%,#637782 23.5%,rgba(240,166,17,0) 0)21px 30px,
+		radial-gradient(circle farthest-side at 0% 50%,#546a76 24%,rgba(240,166,17,0) 0)19px 30px,
+		linear-gradient(#637782 14%,rgba(240,166,17,0) 0, rgba(240,166,17,0) 85%,#637782 0)0 0,
+		linear-gradient(150deg,#637782 24%,#546a76 0,#546a76 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#546a76 0,#546a76 76%,#637782 0)0 0,
+		linear-gradient(30deg,#637782 24%,#546a76 0,#546a76 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#546a76 0,#546a76 76%,#637782 0)0 0,
+		linear-gradient(90deg,#546a76 2%,#637782 0,#637782 98%,#546a76 0%)0 0 #637782;
+	background-size:40px 60px;
+	border-top: 10px solid #546A76;
+	color: #fff;
+	padding: 2em 0;
+}
+
+.posts-navigation a {
+	color: #fff;
+}
+
+.posts-navigation a:hover {
+	text-decoration: underline;
 }
 
 .entry-footer .cat-links .screen-reader-text,
