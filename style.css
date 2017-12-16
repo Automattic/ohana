@@ -614,6 +614,7 @@ a:hover, a:active {
 }
 
 .site-title a {
+	border-bottom: 0;
 	color: #c7d66d;
 	text-decoration: none;
 }
