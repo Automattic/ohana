@@ -658,6 +658,7 @@ a:hover, a:active {
 }
 
 .main-navigation ul a {
+	border-bottom: 0;
 	color: #fff;
 	display: inline-block;
 	padding: 0.5em 0.75em;
@@ -791,20 +792,28 @@ a:hover, a:active {
 	.main-navigation ul li {
 		border-bottom: 0;
 	}
-
-	.main-navigation ul ul li {
-		border-bottom: 1px dashed rgba(255,255,255,0.5);
-	}
-
-	.main-navigation ul ul li:last-child {
-		border-bottom: 0;
-	}
-
+	
 	.main-navigation ul li:after {
 		content: "\00b7";
 		color: #fff;
 		opacity: 0.5;
 		display: inline-block;
+	}
+
+	.main-navigation ul ul li {
+		border-bottom: 1px dashed rgba(255,255,255,0.5);
+		padding-bottom: .5em;
+		width: 100%;
+	}
+
+	.main-navigation ul ul li:last-child {
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	.main-navigation ul ul a {
+		display: inline-block;
+		width: 100%;
 	}
 
 	.main-navigation ul ul ul {
