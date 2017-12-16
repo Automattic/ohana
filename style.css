@@ -792,7 +792,7 @@ a:hover, a:active {
 	.main-navigation ul li {
 		border-bottom: 0;
 	}
-	
+
 	.main-navigation ul li:after {
 		content: "\00b7";
 		color: #fff;
@@ -1217,6 +1217,12 @@ a:hover, a:active {
 }
 
 @media screen and (min-width: 37.5em) {
+	.entry-header:before,
+	.entry-header:after {
+		left: -100%;
+		width: 100%;
+	}
+
 	.entry-header:after,
 	.page-header:after {
 		display: none;
