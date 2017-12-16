@@ -21,10 +21,17 @@
 	clear: both;
 }
 
+.alignfull {
+	margin-left: -4%;
+	margin-right: -4%;
+	max-width: 110%;
+}
+
 @media (min-width: 750px) {
 	.alignfull {
 		margin-left: calc(50% - 50vw);
 		margin-right: calc(50% - 50vw);
+		width: auto;
 		max-width: 1000%;
 	}
 
@@ -125,7 +132,15 @@
 .wp-block-embed {}
 
 /* Pullquotes */
-.wp-block-pullquote {}
+.wp-block-pullquote {
+	border-color: rgba(0,0,0,0.25);
+	color: inherit;
+}
+
+.wp-block-pullquote cite {
+	color: inherit;
+	opacity: 0.8;
+}
 
 /* Tables */
 .wp-block-table {
@@ -162,7 +177,9 @@
 
 /* Latest Posts */
 .wp-block-latest-posts {}
-.wp-block-latest-posts__post-date {}
+.wp-block-latest-posts__post-date {
+	color: rgba(255,255,255,0.8);
+}
 .is-grid {}
 .columns-3 {}
 

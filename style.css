@@ -588,7 +588,7 @@ a:hover, a:active {
 }
 
 .site-branding,
-#site-navigation ul {
+#site-navigation > ul {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 92%;
@@ -597,12 +597,20 @@ a:hover, a:active {
 .site-title {
 	font-weight: normal;
 	font-family: "Alegreya", Georgia, "Times New Roman", serif;
-	font-size: 48px;
-	font-size: 3rem;
 	font-weight: 600;
+	font-size: 36px;
+	font-size: 2.25rem;
+	line-height: 1.25;
 	margin-bottom: 0;
 	text-align: center;
 	text-shadow: 0px 3px 1px #54616f;
+}
+
+@media screen and (min-width: 37.5em) {
+	.site-title {
+		font-size: 48px;
+		font-size: 3rem;
+	}
 }
 
 .site-title a {
@@ -625,7 +633,7 @@ a:hover, a:active {
 	clear: both;
 	display: block;
 	font-family: "Alegreya", Georgia, "Times New Roman", serif;
-	text-align: center;
+	padding: 0.5em 0;
 }
 
 .main-navigation ul {
@@ -635,17 +643,18 @@ a:hover, a:active {
 	padding-left: 0;
 }
 
-.main-navigation ul li:after {
-	content: "\00b7";
-	color: #fff;
-	opacity: 0.5;
-	display: inline-block;
-}
-
-
 .main-navigation ul ul li:after,
 .main-navigation ul li:last-child:after {
 	display: none;
+}
+
+.main-navigation ul li {
+	border-bottom: 1px dashed rgba(255,255,255,0.5);
+}
+
+.main-navigation ul li:last-child,
+.main-navigation ul ul li {
+	border-bottom: 0;
 }
 
 .main-navigation ul a {
@@ -661,19 +670,12 @@ a:hover, a:active {
 }
 
 .main-navigation ul a .icon {
-	margin-left: 6px;
+	display: none;
 }
 
 .main-navigation ul ul {
-	background-color: #455761;
-	border: 2px solid #fff;
-	position: absolute;
-	top: 100%;
-	left: -999em;
-	padding: 0.5em 0;
+	padding: 0.5em 0 0.5em 1em;
 	text-align: left;
-	width: 220px;
-	z-index: 99999;
 }
 
 .main-navigation ul ul .menu-item-has-children > a > .icon,
@@ -681,31 +683,34 @@ a:hover, a:active {
 	display: none;
 }
 
-.main-navigation ul ul li {
-	border-bottom: 1px dashed rgba(255,255,255,0.5);
-}
-
-.main-navigation ul ul li:last-child {
+.main-navigation ul ul li:last-child,
+.main-navigation ul ul ul li {
 	border: none;
 }
 
 .main-navigation ul ul a {
 	color: #fff;
 	display: block;
-	padding: 0.3em 0.75em;
+	padding: 0 0.75em;
+}
+
+.main-navigation ul.nav-menu > li > ul > li a {
+	padding-top: 0.4em;
+}
+
+.main-navigation ul.nav-menu > li > ul > li:first-child a {
+	padding-top: 0;
 }
 
 .main-navigation ul ul ul {
 	border: 0;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 0.7em;
-	padding-left: 1.5em;
-	position: static;
-	width: auto;
+	font-size: 16px;
+	font-size: 1rem;
+	padding: 0 0 0 1.5em;
 }
 
 .main-navigation ul ul ul a {
-	padding: 0.6em 0.75em;
+	padding: 0.2em 0.75em;
 }
 
 .main-navigation ul ul ul a:before {
@@ -719,11 +724,6 @@ a:hover, a:active {
 	left: auto;
 }
 
-.main-navigation li {
-	display: inline-block;
-	position: relative;
-}
-
 .main-navigation a {
 	display: block;
 	text-decoration: none;
@@ -735,13 +735,84 @@ a:hover, a:active {
 	display: block;
 }
 
+.menu-toggle {
+	margin: 0 auto;
+}
+
+.menu-toggle .icon-close,
+.menu-toggle .icon-menu {
+	margin-right: 0.25em;
+}
+
+.menu-toggle .icon-close,
+.toggled .menu-toggle .icon-menu {
+	display: none;
+}
+
+.toggled .menu-toggle .icon-close {
+	display: inline-block;
+}
+
 @media screen and (min-width: 37.5em) {
+	.main-navigation {
+		padding: 0;
+		text-align: center;
+	}
+
 	.menu-toggle {
 		display: none;
 	}
+
 	.main-navigation ul {
 		display: block;
 	}
+
+	.main-navigation li {
+		display: inline-block;
+		position: relative;
+	}
+
+	.main-navigation ul a .icon {
+		display: inline-block;
+		margin-left: 6px;
+	}
+
+	.main-navigation ul ul {
+		background-color: #455761;
+		border: 2px solid #fff;
+		padding-left: 0;
+		position: absolute;
+		top: 100%;
+		left: -999em;
+		width: 220px;
+		z-index: 99999;
+	}
+
+	.main-navigation ul li {
+		border-bottom: 0;
+	}
+
+	.main-navigation ul ul li {
+		border-bottom: 1px dashed rgba(255,255,255,0.5);
+	}
+
+	.main-navigation ul ul li:last-child {
+		border-bottom: 0;
+	}
+
+	.main-navigation ul li:after {
+		content: "\00b7";
+		color: #fff;
+		opacity: 0.5;
+		display: inline-block;
+	}
+
+	.main-navigation ul ul ul {
+		position: static;
+		width: auto;
+	}
+
+
 }
 
 .comment-navigation,
