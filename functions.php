@@ -87,6 +87,7 @@ if ( ! function_exists( 'ohana_setup' ) ) :
 		 */
 		add_theme_support( 'gutenberg', array(
 			'wide-images' => true,
+			'full-images' => true,
 			'colors' => array(
 				'#dceab2',
 				'#fc814a',
@@ -118,7 +119,6 @@ add_action( 'after_setup_theme', 'ohana_content_width', 0 );
  */
 function ohana_editor_styles() {
 	wp_enqueue_style( 'ohana-editor-style', get_template_directory_uri() . '/assets/stylesheets/editor-style.css' );
-	wp_enqueue_style( 'ohana-block-editor-style', get_template_directory_uri() . '/assets/stylesheets/blocks.css' );
 	wp_enqueue_style( 'ohana-fonts', ohana_fonts_url(), array(), null );
 
 }
