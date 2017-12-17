@@ -225,7 +225,7 @@ select,
 optgroup,
 textarea {
 	color: #444444;
-	font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 18px;
 	font-size: 1.125rem;
 	line-height: 1.5;

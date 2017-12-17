@@ -964,8 +964,6 @@ a:hover, a:active {
 	background-size: auto auto, auto auto, auto auto, auto auto, auto auto, auto auto;
 	background-size: 40px 60px;
 	color: #fff;
-	display: flex;
-	flex-wrap: wrap;
 	padding: 2em 4%;
 }
 
@@ -973,9 +971,20 @@ a:hover, a:active {
 	color: #fff;
 }
 
-.widget-area .widget {
-	padding: 0 1em;
-	width: 33.3333%;
+.widget-area .widget-title {
+	color: #c7d66d;
+}
+
+@media screen and (min-width: 37.5em) {
+	.widget-area {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.widget-area .widget {
+		padding: 0 1em;
+		width: 33.3333%;
+	}
 }
 
 .widget:not(.widget_text) ul,
@@ -984,6 +993,12 @@ a:hover, a:active {
 	padding: 0;
 	margin: 0;
 }
+
+.widget:not(.widget_text) li:not(:last-child) {
+	border-bottom: 1px dashed rgba(255,255,255,0.2);
+	padding: 0.25em 0;
+}
+
 
 /*--------------------------------------------------------------
 # Content

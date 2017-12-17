@@ -90,9 +90,15 @@ if ( ! function_exists( 'ohana_setup' ) ) :
 			'full-images' => true,
 			'colors' => array(
 				'#dceab2',
+				'#cedca5',
+				'#eb7039',
 				'#fc814a',
+				'#9ee3ec',
 				'#89D2DC',
+				'#6f945b',
 				'#88AB75',
+				'#fff',
+				'#444',
 			),
 		) );
 
