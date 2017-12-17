@@ -533,7 +533,7 @@ a:hover, a:focus, a:active {
 	border-bottom-color: currentColor;
 	color: #5d576b;
 	opacity: 0.8;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 a:focus {
@@ -1137,10 +1137,6 @@ a:hover, a:active {
 	font-size: 32px;
 	font-size: 2rem;
 	margin-bottom: 0;
-}
-
-.entry-title a {
-	text-decoration: none;
 }
 
 .entry-meta {
