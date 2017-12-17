@@ -739,7 +739,12 @@ a:hover, a:active {
 }
 
 .menu-toggle {
+	background-color: #36474f;
 	margin: 0 auto;
+}
+
+.menu-toggle:hover {
+	background-color: #576b75;
 }
 
 .menu-toggle .icon-close,
