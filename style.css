@@ -664,7 +664,7 @@ a:hover, a:active {
 .main-navigation li a:hover,
 .main-navigation li a:focus,
 .main-navigation li a:active {
-	color: #FC814A;
+	color: #FC976A;
 }
 
 .main-navigation ul a .icon {
@@ -963,11 +963,12 @@ a:hover, a:active {
 }
 
 .widget-area a {
-	color: #fff;
+	color: #FC976A;
 }
 
 .widget-area .widget-title {
 	color: #c7d66d;
+	text-shadow: 0px 3px 1px #54616f;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -992,6 +993,11 @@ a:hover, a:active {
 .widget:not(.widget_text) li:not(:last-child) {
 	border-bottom: 1px dashed rgba(255,255,255,0.2);
 	padding: 0.25em 0;
+}
+
+.widget-search input[type="search"] {
+	border: 0;
+	padding: 6px;
 }
 
 
@@ -1383,6 +1389,7 @@ a:hover, a:active {
 		linear-gradient(90deg,#546a76 2%,#637782 0,#637782 98%,#546a76 0%)0 0 #637782;
 	background-size:40px 60px;
 	border-top: 10px solid #546A76;
+	border-bottom: 10px solid #546A76;
 	color: #fff;
 	padding: 2em 0;
 }
