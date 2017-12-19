@@ -523,11 +523,6 @@ a {
 	border-bottom: 2px dotted transparent;
 	color: #222222;
 	text-decoration: none;
-	-webkit-transition: all .25s ease-in-out;
-    -moz-transition: all .25s ease-in-out;
-    -ms-transition: all .25s ease-in-out;
-    -o-transition: all .25s ease-in-out;
-    transition: all .25s ease-in-out;
 }
 
 a:hover, a:focus, a:active {
@@ -1185,6 +1180,11 @@ a:hover, a:active {
 	font-size: 32px;
 	font-size: 2rem;
 	margin-bottom: 0;
+}
+
+.entry-title a {
+	border-bottom-color: transparent;
+	text-decoration: none;
 }
 
 .entry-meta {
