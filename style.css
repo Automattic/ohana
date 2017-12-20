@@ -275,6 +275,7 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 	font-family: "Alegreya", Georgia, "Times New Roman", serif;
+	line-height: 1.1;
 }
 
 p {
@@ -739,7 +740,7 @@ a:hover, a:active {
 }
 
 .menu-toggle:hover {
-	background-color: #576b75;
+	background-color: rgba(54,71,79,0.5);
 }
 
 .menu-toggle .icon-close,
@@ -976,14 +977,16 @@ a:hover, a:active {
 	text-shadow: 0px 3px 1px #54616f;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 54em) {
 	.widget-area {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
 	}
 
 	.widget-area .widget {
 		padding: 0 1em;
+		max-width: 400px;
 		width: 33.3333%;
 	}
 }
@@ -1016,8 +1019,24 @@ a:hover, a:active {
 	display: block;
 }
 
-.hentry {
-	padding-top: 2em;
+.hentry,
+.error404 section.not-found {
+	padding-top: 0.5em;
+}
+
+.error404 section.not-found {
+	padding-bottom: 0.5em;
+}
+
+@media screen and (min-width: 37.5em) {
+	.hentry,
+	.error404 section.not-found {
+		padding-top: 2em;
+	}
+
+	.error404 section.not-found {
+		padding-bottom: 2em;
+	}
 }
 
 /*Grey: #546A76*/
@@ -1182,7 +1201,16 @@ a:hover, a:active {
 .entry-summary,
 .post-thumbnail {
 	display: block;
-	margin-top: 1.5em;
+	margin-top: 0.5em;
+}
+
+@media screen and (min-width: 37.5em) {
+	.page-content,
+	.entry-content,
+	.entry-summary,
+	.post-thumbnail {
+		margin-top: 1.5em;
+	}
 }
 
 /* Entry headers */
@@ -1217,8 +1245,13 @@ a:hover, a:active {
 .entry-header,
 .page-header {
 	background-color: #fff;
-	padding: 0 0 0.5em;
+	padding: 0.5em 0;
 	position: relative;
+}
+
+.entry-header .entry-title,
+.page-header .page-title {
+	margin-top: 0;
 }
 
 .entry-header:before,
@@ -1274,9 +1307,11 @@ a:hover, a:active {
 
 @media screen and (min-width: 37.5em) {
 	.entry-header:before,
-	.entry-header:after {
-		left: -100%;
-		width: 100%;
+	.entry-header:after,
+	.page-header:before,
+	.page-header:after {
+		left: -200%;
+		width: 200%;
 	}
 
 	.entry-header:after,
@@ -1314,7 +1349,13 @@ a:hover, a:active {
 .entry-footer {
 	font-size: 0.9em;
 	font-family: "Lato", Helvetica, sans-serif;
-	padding-bottom: 4em;
+	padding-bottom: 1em;
+}
+
+@media screen and (min-width: 37.5em) {
+	.entry-footer {
+		padding-bottom: 4em;
+	}
 }
 
 .blog article.hentry:nth-of-type(4n+1) a,
@@ -1374,7 +1415,6 @@ a:hover, a:active {
 	color: #25798E;
 }
 
-
 .entry-footer > span {
 	margin-right: 1.0em;
 }
@@ -1411,14 +1451,14 @@ a:hover, a:active {
 .entry-footer .tag-links .screen-reader-text {
 	clip: auto;
 	clip-path: none;
-    height: auto;
-    position: static !important;
-    display: inline-block;
-    overflow: initial;
-    width: auto;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 14px;
+	height: auto;
+	position: static !important;
+	display: inline-block;
+	overflow: initial;
+	width: auto;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
 }
 
 .entry-footer .icon {
@@ -1430,7 +1470,8 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 
 .single article.hentry,
-.page article.hentry {
+.page article.hentry,
+.error404 section.not-found {
 	background-color: #eef7d2;
 }
 
