@@ -278,6 +278,36 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1.1;
 }
 
+h1 {
+	font-size: 42px;
+	font-size: 2.625rem;
+}
+
+h2 {
+	font-size: 36px;
+	font-size: 2.25rem;
+}
+
+h3 {
+	font-size: 30px;
+	font-size: 1.875rem;
+}
+
+h4 {
+	font-size: 24px;
+	font-size: 1.5rem;
+}
+
+h5 {
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+
+h6 {
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+
 p {
 	margin-bottom: 1.5em;
 }
@@ -981,7 +1011,6 @@ a:hover, a:active {
 	.widget-area {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
 	}
 
 	.widget-area .widget {
