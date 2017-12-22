@@ -89,6 +89,11 @@
 .wp-block-image.alignwide {}
 .wp-block-image.alignfull {}
 
+.wp-block-image figcaption {
+	color: inherit;
+	opacity: 0.8;
+}
+
 /* Galleries */
 .wp-block-gallery {}
 .wp-block-gallery.alignleft {}
