@@ -112,7 +112,8 @@
 .wp-block-quote.blocks-quote-style-1 {}
 .wp-block-quote.blocks-quote-style-2 {}
 .wp-block-quote cite {
-	color: rgba(255,255,255,0.8);
+	color: inherit;
+	opacity: 0.8;
 }
 
 /* Cover Images */
