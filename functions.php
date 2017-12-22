@@ -184,11 +184,11 @@ function ohana_fonts_url() {
 		$font_families = array();
 
 		if ( 'off' !== $alegreya ) {
-			$font_families[] = 'Alegreya';
+			$font_families[] = 'Alegreya:400,400italic,700,700italic';
 		}
 
 		if ( 'off' !== $lato ) {
-			$font_families[] = 'Lato';
+			$font_families[] = 'Lato:400,400italic,700,700italic';
 		}
 
 		$query_args = array(
