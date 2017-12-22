@@ -1039,6 +1039,10 @@ a:hover, a:active {
 	padding: 6px;
 }
 
+.widget_calendar td#next {
+	text-align: right;
+}
+
 
 /*--------------------------------------------------------------
 # Content
