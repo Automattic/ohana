@@ -1742,12 +1742,12 @@ div#respond {
 
 .search-results .site-main,
 .archive .site-main {
-
+	background-color: #576b75;
 }
 
 .search-results .page-header,
 .archive .page-header {
-	color: #637782;
+	color: #fff;
 	padding-top: 1em;
 	padding-bottom: 1em;
 }
