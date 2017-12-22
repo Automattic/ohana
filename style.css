@@ -1749,6 +1749,12 @@ div#respond {
 	position: relative;
 }
 
+.comment-form-author input,
+.comment-form-email input,
+.comment-form-url input {
+	width: 100%;
+}
+
 .comment-respond {
 	padding-top: 1.5em;
 	margin-top: 1.5em;
