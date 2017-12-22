@@ -957,6 +957,8 @@ a:hover, a:active {
 .clear:after,
 .entry-content:before,
 .entry-content:after,
+.page-content:before,
+.page-content:after,
 .comment-content:before,
 .comment-content:after,
 .site-content:before,
@@ -970,6 +972,7 @@ a:hover, a:active {
 
 .clear:after,
 .entry-content:after,
+.page-content:after,
 .comment-content:after,
 .site-content:after,
 .site-footer:after {
@@ -1048,21 +1051,25 @@ a:hover, a:active {
 }
 
 .hentry,
-.error404 section.not-found {
+.error404 section.not-found,
+.search-no-results .not-found {
 	padding-top: 0.5em;
 }
 
-.error404 section.not-found {
+.error404 section.not-found,
+.search-no-results .not-found {
 	padding-bottom: 0.5em;
 }
 
 @media screen and (min-width: 37.5em) {
 	.hentry,
-	.error404 section.not-found {
+	.error404 section.not-found,
+	.search-no-results .not-found {
 		padding-top: 2em;
 	}
 
-	.error404 section.not-found {
+	.error404 section.not-found,
+	.search-no-results .not-found {
 		padding-bottom: 2em;
 	}
 }
@@ -1092,17 +1099,27 @@ a:hover, a:active {
 
 .hentry:nth-of-type(4n+1) .entry-header,
 .hentry:nth-of-type(4n+1) .entry-header:before,
-.hentry:nth-of-type(4n+1) .entry-header:after {
+.hentry:nth-of-type(4n+1) .entry-header:after,
+.error404 section.not-found .page-header,
+.error404 section.not-found .page-header:before,
+.error404 section.not-found .page-header:after,
+.search-no-results .not-found .page-header,
+.search-no-results .not-found .page-header:before,
+.search-no-results .not-found .page-header:after {
 	background-color: #cedca5;
 }
 
 .hentry:nth-of-type(4n+1) .entry-title:before,
-.hentry:nth-of-type(4n+1) .page-title:before {
+.hentry:nth-of-type(4n+1) .page-title:before,
+.error404 section.not-found .page-title:before,
+.search-no-results .not-found .page-title:before {
 	border-color: #cedca5 transparent transparent transparent;
 }
 
 .hentry:nth-of-type(4n+1) .entry-title:after,
-.hentry:nth-of-type(4n+1) .page-title:after {
+.hentry:nth-of-type(4n+1) .page-title:after,
+.error404 section.not-found .page-title:after,
+.search-no-results .not-found .page-title:after {
 	border-color: transparent transparent #cedca5 transparent;
 }
 
@@ -1224,12 +1241,17 @@ a:hover, a:active {
 	display: none;
 }
 
-.page-content,
 .entry-content,
 .entry-summary,
-.post-thumbnail {
+.post-thumbnail,
+.page-content {
 	display: block;
 	margin-top: 0.5em;
+}
+
+.page .entry-content,
+.page-content {
+	padding-bottom: 2em;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -1243,13 +1265,15 @@ a:hover, a:active {
 
 /* Entry headers */
 
-.entry-title {
+.entry-title,
+.page-title {
 	font-size: 32px;
 	font-size: 2rem;
 	margin-bottom: 0;
 }
 
-.entry-title a {
+.entry-title a,
+.page-title a {
 	border-bottom-color: transparent;
 	text-decoration: none;
 }
@@ -1271,21 +1295,25 @@ a:hover, a:active {
 /* Ribbon behind headers */
 
 .entry-header,
-.page-header {
+.no-results .page-header,
+.not-found .page-header {
 	background-color: #fff;
 	padding: 0.5em 0;
 	position: relative;
 }
 
 .entry-header .entry-title,
-.page-header .page-title {
+.no-results .page-header .page-title,
+.not-found .page-header .page-title {
 	margin-top: 0;
 }
 
 .entry-header:before,
-.page-header:before,
+.no-results .page-header:before,
+.not-found .page-header:before,
 .entry-header:after,
-.page-header:after {
+.no-results .page-header:after,
+.not-found .page-header:after {
 	background-color: #fff;
 	bottom: 0;
 	content: "";
@@ -1296,20 +1324,24 @@ a:hover, a:active {
 }
 
 .entry-header:after,
-.page-header:after {
+.no-results .page-header:after,
+.not-found .page-header:after {
 	left: auto;
 	right: -5%;
 }
 
 .entry-title,
-.page-title {
+.no-results .page-title,
+.not-found .page-title {
 	position: static;
 }
 
 .entry-title:before,
-.page-title:before,
+.no-results .page-title:before,
+.not-found .page-title:before,
 .entry-title:after,
-.page-title:after {
+.no-results .page-title:after,
+.not-found .page-title:after {
 	border-style: solid;
 	content: "";
 	display: none;
@@ -1320,14 +1352,16 @@ a:hover, a:active {
 }
 
 .entry-title:before,
-.page-title:before {
+.no-results .page-title:before,
+.not-found .page-title:before {
 	border-width: 40px 40px 0 0;
 	border-color: #fff transparent transparent transparent;
 	top: 0;
 }
 
 .entry-title:after,
-.page-title:after {
+.no-results .page-title:after,
+.not-found .page-title:after {
 	border-width: 0 40px 40px 0;
 	border-color: transparent transparent #fff transparent;
 	bottom: 0;
@@ -1336,21 +1370,26 @@ a:hover, a:active {
 @media screen and (min-width: 37.5em) {
 	.entry-header:before,
 	.entry-header:after,
-	.page-header:before,
-	.page-header:after {
+	.no-results .page-header:before,
+	.no-results .page-header:after,
+	.not-found .page-header:before,
+	.not-found .page-header:after {
 		left: -200%;
 		width: 200%;
 	}
 
 	.entry-header:after,
-	.page-header:after {
+	.no-results .page-header:after,
+	.not-found .page-header:after {
 		display: none;
 	}
 
 	.entry-title:before,
-	.page-title:before,
+	.no-results .page-title:before,
+	.not-found .page-title:before,
 	.entry-title:after,
-	.page-title:after {
+	.no-results .page-title:after,
+	.not-found .page-title:after {
 		display: block;
 	}
 }
@@ -1499,7 +1538,8 @@ a:hover, a:active {
 
 .single article.hentry,
 .page article.hentry,
-.error404 section.not-found {
+.error404 section.not-found,
+.search-no-results .not-found {
 	background-color: #eef7d2;
 }
 
@@ -1695,6 +1735,31 @@ div#respond {
 .required {
 	color: #f78769;
 }
+
+/*--------------------------------------------------------------
+## Archives & Search Results
+--------------------------------------------------------------*/
+
+.search-results .site-main,
+.archive .site-main {
+
+}
+
+.search-results .page-header,
+.archive .page-header {
+	color: #637782;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.search-results .page-title,
+.archive .page-title {
+	margin-top: 0;
+}
+
+/*--------------------------------------------------------------
+## Search - no results
+--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Infinite scroll

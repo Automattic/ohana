@@ -190,7 +190,8 @@
 /* Latest Posts */
 .wp-block-latest-posts {}
 .wp-block-latest-posts__post-date {
-	color: rgba(255,255,255,0.8);
+	color: inherit;
+	opacity: 0.8;
 }
 .is-grid {}
 .columns-3 {}
