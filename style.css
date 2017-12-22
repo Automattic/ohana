@@ -275,7 +275,6 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 	font-family: "Alegreya", Georgia, "Times New Roman", serif;
-	line-height: 1.1;
 }
 
 h1 {
@@ -1735,7 +1734,7 @@ div#respond {
 	max-width: 92%;
 }
 
-@media all and (min-width:768px) {
+@media all and (min-width: 769px) {
 	.entry-header,
 	.entry-content,
 	.entry-summary,
