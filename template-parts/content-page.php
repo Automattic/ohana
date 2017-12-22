@@ -21,8 +21,10 @@
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ohana' ),
-				'after'  => '</div>',
+				'before'      => '<div class="page-links">' . esc_html__( 'Pages:', 'ohana' ),
+				'after'       => '</div>',
+				'link_before' => '<span>',
+				'link_after'  => '</span>',
 			) );
 		?>
 	</div><!-- .entry-content -->

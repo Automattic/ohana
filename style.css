@@ -1413,6 +1413,34 @@ a:hover, a:active {
 	margin: 0 0 1.5em;
 }
 
+.page-links span {
+	background-color: rgba(0,0,0,0.05);
+	border-radius: 1em;
+	display: inline-block;
+	min-width: 2em;
+	padding: 0.15em 0.3em;
+	text-align: center;
+}
+
+.page-links > span {
+	background-color: rgba(0,0,0,0.15);
+	font-weight: bold;
+}
+
+.page-links a {
+	display: inline-block;
+	margin-bottom: 0.1em;
+}
+
+.page-links a:hover,
+.page-links a:focus {
+	border: 0;
+}
+
+.page-links a:hover span {
+	background-color: rgba(0,0,0,0.15);
+}
+
 .entry-footer {
 	font-size: 0.9em;
 	font-family: "Lato", Helvetica, sans-serif;
