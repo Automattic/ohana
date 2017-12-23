@@ -1163,6 +1163,37 @@ a:hover, a:active {
 	border-color: transparent transparent #eb7039 transparent;
 }
 
+.blog article.hentry:nth-of-type(4n+2) button,
+.blog article.hentry:nth-of-type(4n+2) input[type="button"],
+.blog article.hentry:nth-of-type(4n+2) input[type="reset"],
+.blog article.hentry:nth-of-type(4n+2) input[type="submit"],
+.archive article.hentry:nth-of-type(4n+2) button,
+.archive article.hentry:nth-of-type(4n+2) input[type="button"],
+.archive article.hentry:nth-of-type(4n+2) input[type="reset"],
+.archive article.hentry:nth-of-type(4n+2) input[type="submit"],
+.search article.hentry:nth-of-type(4n+2) button,
+.search article.hentry:nth-of-type(4n+2) input[type="button"],
+.search article.hentry:nth-of-type(4n+2) input[type="reset"],
+.search article.hentry:nth-of-type(4n+2) input[type="submit"] {
+	background-color: #dceab2;
+	color: #61844e;
+}
+
+.blog article.hentry:nth-of-type(4n+2) button:hover,
+.blog article.hentry:nth-of-type(4n+2) input[type="button"]:hover,
+.blog article.hentry:nth-of-type(4n+2) input[type="reset"]:hover,
+.blog article.hentry:nth-of-type(4n+2) input[type="submit"]:hover,
+.archive article.hentry:nth-of-type(4n+2) button:hover,
+.archive article.hentry:nth-of-type(4n+2) input[type="button"]:hover,
+.archive article.hentry:nth-of-type(4n+2) input[type="reset"]:hover,
+.archive article.hentry:nth-of-type(4n+2) input[type="submit"]:hover,
+.search article.hentry:nth-of-type(4n+2) button:hover,
+.search article.hentry:nth-of-type(4n+2) input[type="button"]:hover,
+.search article.hentry:nth-of-type(4n+2) input[type="reset"]:hover,
+.search article.hentry:nth-of-type(4n+2) input[type="submit"]:hover {
+	background-color: #cedca5;
+}
+
 /* Blue */
 .blog article.hentry:nth-of-type(4n+3),
 .archive article.hentry:nth-of-type(4n+3),
@@ -1301,8 +1332,6 @@ a:hover, a:active {
 	text-transform: none;
 }
 
-/* Entry content */
-
 /* Ribbon behind headers */
 
 .entry-header,
@@ -1405,6 +1434,8 @@ a:hover, a:active {
 	}
 }
 
+/* Entry content */
+
 .entry-header,
 .entry-content,
 .entry-summary,
@@ -1416,6 +1447,21 @@ a:hover, a:active {
 	margin-left: auto;
 	margin-right: auto;
 	word-wrap: break-word;
+}
+
+/* Password Protected form */
+
+.post-password-form input {
+	display: block;
+	margin-bottom: 0.5em;
+	width: 100%;
+}
+
+@media screen and (min-width: 30em) {
+	.post-password-form input {
+		display: inline-block;
+		width: auto;
+	}
 }
 
 /* Entry footer */
