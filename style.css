@@ -514,6 +514,7 @@ textarea {
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	padding: 3px;
+	-webkit-appearance: none;
 }
 
 input[type="text"]:focus,
