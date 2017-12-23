@@ -165,6 +165,10 @@
 	display: table;
 }
 
+.wp-block-table.alignfull {
+	width: 96vw;
+}
+
 /* Preformatted */
 .wp-block-preformatted {}
 
