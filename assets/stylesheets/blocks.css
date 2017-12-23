@@ -29,6 +29,17 @@
 	max-width: 110%;
 }
 
+.wp-block-text-columns.alignfull,
+.wp-block-preformatted.alignfull,
+.wp-block-button.alignfull,
+.wp-block-pullquote.alignfull,
+.wp-block-latest-posts.alignfull,
+.wp-block-categories.alignfull,
+p.alignfull {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 @media (min-width: 750px) {
 	.alignfull {
 		margin-left: calc(50% - 50vw);
@@ -44,7 +55,8 @@
 	.wp-block-button.alignfull,
 	.wp-block-pullquote.alignfull,
 	.wp-block-latest-posts.alignfull,
-	.wp-block-categories.alignfull {
+	.wp-block-categories.alignfull,
+	p.alignfull {
 		margin-left: calc(50% - 48vw);
 		margin-right: calc(50% - 48vw);
 	}
