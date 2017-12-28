@@ -1691,11 +1691,17 @@ a:hover, a:active {
 	}
 }
 
-
-
 .comment-list > .comment:first-of-type {
 	border-top: 0;
 	padding-top: 0;
+}
+
+.comment-list:after {
+	background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(0,0,0,0.2) 5px, rgba(0,0,0,0.2) 8px, transparent 8px, transparent 10px, rgba(0,0,0,0.2) 10px, rgba(0,0,0,0.2) 13px, transparent 13px, transparent 15px, rgba(0,0,0,0.2) 15px, rgba(0,0,0,0.2) 18px);
+	content: '';
+	display: block;
+	height: 1px;
+	margin: 1.5em 0;
 }
 
 .comment,
@@ -1704,9 +1710,9 @@ a:hover, a:active {
 	margin-top: 1.5em;
 }
 
-.comment:after,
-.trackback:after,
-.pingback:after {
+.comment:before,
+.trackback:before,
+.pingback:before {
 	background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(0,0,0,0.2) 5px, rgba(0,0,0,0.2) 8px, transparent 8px, transparent 10px, rgba(0,0,0,0.2) 10px, rgba(0,0,0,0.2) 13px, transparent 13px, transparent 15px, rgba(0,0,0,0.2) 15px, rgba(0,0,0,0.2) 18px);
 	content: '';
 	display: block;
