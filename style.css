@@ -998,7 +998,7 @@ a:hover, a:active {
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 1.5em;
+	padding: 0 0 2em;
 	word-wrap: break-word;
 }
 
@@ -1009,7 +1009,7 @@ a:hover, a:active {
 
 .widget-area {
 	background: #546A76;
-	background: radial-gradient(circle farthest-side at 0% 50%,#637782 23.5%,rgba(240,166,17,0) 0)21px 30px, radial-gradient(circle farthest-side at 0% 50%,#546a76 24%,rgba(240,166,17,0) 0)19px 30px, linear-gradient(#637782 14%,rgba(240,166,17,0) 0, rgba(240,166,17,0) 85%,#637782 0)0 0, linear-gradient(150deg,#637782 24%,#546a76 0,#546a76 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#546a76 0,#546a76 76%,#637782 0)0 0, linear-gradient(30deg,#637782 24%,#546a76 0,#546a76 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#546a76 0,#546a76 76%,#637782 0)0 0, linear-gradient(90deg,#546a76 2%,#637782 0,#637782 98%,#546a76 0%)0 0 #637782;
+	background: radial-gradient(circle farthest-side at 0% 50%,#637782 23.5%,rgba(240,166,17,0) 0)21px 30px, radial-gradient(circle farthest-side at 0% 50%,#596c77 24%,rgba(240,166,17,0) 0)19px 30px, linear-gradient(#637782 14%,rgba(240,166,17,0) 0, rgba(240,166,17,0) 85%,#637782 0)0 0, linear-gradient(150deg,#637782 24%,#596c77 0,#596c77 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#596c77 0,#596c77 76%,#637782 0)0 0, linear-gradient(30deg,#637782 24%,#596c77 0,#596c77 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#596c77 0,#596c77 76%,#637782 0)0 0, linear-gradient(90deg,#596c77 2%,#637782 0,#637782 98%,#596c77 0%)0 0 #637782;
 	background-size: auto auto, auto auto, auto auto, auto auto, auto auto, auto auto;
 	background-size: 40px 60px;
 	color: #fff;
@@ -1022,6 +1022,9 @@ a:hover, a:active {
 
 .widget-area .widget-title {
 	color: #c7d66d;
+	font-size: 30px;
+	font-size: 1.875rem;
+	margin: 0;
 	text-shadow: 0px 3px 1px #54616f;
 }
 
@@ -1050,15 +1053,106 @@ a:hover, a:active {
 	padding: 0.25em 0;
 }
 
-.widget-search input[type="search"] {
+.widget ul.children {
+	padding-left: 2em;
+}
+
+.widget ul.children li:last-child {
+	padding: 0.25em 0;
+}
+
+/* Calendar */
+
+.widget_calendar caption {
+	font-size: 0.9em;
+	letter-spacing: 1px;
+	padding-bottom: 0.25em;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.widget_calendar th,
+.widget_calendar td {
+	text-align: center;
+}
+
+/* Goodreads */
+
+.widget_goodreads div[class^="gr_custom_container"] {
+	background: transparent;
 	border: 0;
-	padding: 6px;
+	border-radius: 0;
+	color: inherit;
 }
 
-.widget_calendar td#next {
-	text-align: right;
+.widget_goodreads div[class^="gr_custom_container"] a {
+	color: inherit;
 }
 
+.widget_goodreads div[class^="gr_custom_each_container"] {
+	border-bottom: 1px dashed rgba(255,255,255,0.2);
+}
+
+/* Jetpack - Recent Posts */
+
+.widget_jetpack_display_posts_widget .jetpack-display-remote-posts h4:not(:first-child) {
+	border-top: 1px dashed rgba(255,255,255,0.2);
+	margin-top: 1em;
+	padding-top: 1em;
+}
+
+/* Recent Posts */
+
+.widget_recent_entries .post-date {
+	display: block;
+	font-size: 0.9em;
+}
+
+/* Search */
+
+.widget_search input[type="search"] {
+	border: 0;
+	padding: 6px 3px;
+}
+
+/* Social */
+
+.widget.widget_wpcom_social_media_icons_widget ul li:not(:last-child) {
+	border-bottom: 0;
+}
+
+.widget_wpcom_social_media_icons_widget a.genericon {
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+
+/* Tag Cloud */
+
+.widget.widget_tag_cloud ul li:not(:last-child) {
+	border-bottom: 0;
+}
+
+.widget_tag_cloud ul {
+	list-style: none;
+}
+
+.widget_tag_cloud ul li {
+	display: inline;
+}
+
+.widget_tag_cloud ul li a {
+	background-color: #54656f;
+	border-bottom: 0;
+	color: #fff;
+	display: inline-block;
+	margin-bottom: 0.2em;
+	padding: 0.2em 0.5em 0.25em;
+}
+
+.widget_tag_cloud ul li a:hover {
+	background-color: transparent;
+	text-decoration: none;
+}
 
 /*--------------------------------------------------------------
 # Content
@@ -1800,9 +1894,13 @@ h3#reply-title {
 
 /* Respond */
 
-div#respond {
+#respond {
 	margin: 1.5em 0 0;
 	padding: 1.5em 0 0;
+}
+
+#respond:first-child {
+	padding-top: 0;
 }
 
 .comment-reply-title,
@@ -1860,6 +1958,10 @@ div#respond {
 /*--------------------------------------------------------------
 ## Archives & Search Results
 --------------------------------------------------------------*/
+
+.search-form {
+
+}
 
 .search-results .site-main,
 .archive .site-main {

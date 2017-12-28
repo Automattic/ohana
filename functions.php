@@ -200,6 +200,23 @@ function ohana_fonts_url() {
 }
 
 /**
+ * Modifies tag cloud widget arguments to display all tags in the same font size
+ * and use list format for better accessibility.
+ *
+ * @param array $args Arguments for tag cloud widget.
+ * @return array The filtered arguments for tag cloud widget.
+ */
+function ohana_widget_tag_cloud_args( $args ) {
+	$args['largest']  = 0.9;
+	$args['smallest'] = 0.9;
+	$args['unit']     = 'em';
+	$args['format']   = 'list';
+
+	return $args;
+}
+add_filter( 'widget_tag_cloud_args', 'ohana_widget_tag_cloud_args' );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
