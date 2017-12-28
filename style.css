@@ -855,8 +855,6 @@ a:hover, a:active {
 		position: static;
 		width: auto;
 	}
-
-
 }
 
 .comment-navigation,
@@ -870,21 +868,32 @@ a:hover, a:active {
 .post-navigation .nav-links {
 	max-width: 92%;
 	margin: auto;
+	text-align: center;
 }
 
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
-	float: left;
-	width: 50%;
+	margin-bottom: 1em;
 }
 
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
+@media screen and (min-width: 37.5em) {
+	.comment-navigation .nav-previous,
+	.posts-navigation .nav-previous,
+	.post-navigation .nav-previous {
+		float: left;
+		margin-bottom: 0;
+		text-align: left;
+		width: 50%;
+	}
+
+	.comment-navigation .nav-next,
+	.posts-navigation .nav-next,
+	.post-navigation .nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -1637,7 +1646,13 @@ a:hover, a:active {
 	border-top: 15px solid #88AB75;
 	border-bottom: 15px solid #88AB75;
 	color: #fff;
-	padding: 2em 0;
+	padding: 1em 0;
+}
+
+@media screen and (min-width: 37.5em) {
+	.post-navigation {
+		padding: 2em 0;
+	}
 }
 
 .post-navigation a {
