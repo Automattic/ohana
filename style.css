@@ -1681,6 +1681,18 @@ a:hover, a:active {
 	margin-left: 2.25em;
 }
 
+.comment-list .children .children {
+	margin-left: 0;
+}
+
+@media screen and (min-width: 37.5em) {
+	.comment-list .children .children {
+		margin-left: 2.25em;
+	}
+}
+
+
+
 .comment-list > .comment:first-of-type {
 	border-top: 0;
 	padding-top: 0;
@@ -1699,7 +1711,7 @@ a:hover, a:active {
 	content: '';
 	display: block;
 	height: 1px;
-	margin-bottom: 1.5em;
+	margin: 1.5em 0;
 }
 
 .comment .comment-content {
@@ -1738,10 +1750,6 @@ a:hover, a:active {
 	position: relative;
 	width: 70px;
 	height: 70px;
-}
-
-.comment-meta .comment-author {
-
 }
 
 .bypostauthor > .comment-body:first-of-type .comment-author .avatar {
