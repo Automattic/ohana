@@ -1216,29 +1216,17 @@ a:hover, a:active {
 	height: 50px;
 }
 
-.hentry:nth-of-type(4n+1) .entry-header,
-.hentry:nth-of-type(4n+1) .entry-header:before,
-.hentry:nth-of-type(4n+1) .entry-header:after,
-.error404 section.not-found .page-header,
-.error404 section.not-found .page-header:before,
-.error404 section.not-found .page-header:after,
-.search-no-results .not-found .page-header,
-.search-no-results .not-found .page-header:before,
-.search-no-results .not-found .page-header:after {
+.hentry:nth-of-type(4n+1) .entry-meta,
+.hentry:nth-of-type(4n+1) .entry-meta:before,
+.hentry:nth-of-type(4n+1) .entry-meta:after {
 	background-color: #cedca5;
 }
 
-.hentry:nth-of-type(4n+1) .entry-title:before,
-.hentry:nth-of-type(4n+1) .page-title:before,
-.error404 section.not-found .page-title:before,
-.search-no-results .not-found .page-title:before {
+.hentry:nth-of-type(4n+1) .posted-on:before {
 	border-color: #cedca5 transparent transparent transparent;
 }
 
-.hentry:nth-of-type(4n+1) .entry-title:after,
-.hentry:nth-of-type(4n+1) .page-title:after,
-.error404 section.not-found .page-title:after,
-.search-no-results .not-found .page-title:after {
+.hentry:nth-of-type(4n+1) .posted-on:after {
 	border-color: transparent transparent #cedca5 transparent;
 }
 
@@ -1255,19 +1243,17 @@ a:hover, a:active {
 	border-bottom: 25px solid #fc814a;
 }
 
-.hentry:nth-of-type(4n+2) .entry-header,
-.hentry:nth-of-type(4n+2) .entry-header:before,
-.hentry:nth-of-type(4n+2) .entry-header:after {
+.hentry:nth-of-type(4n+2) .entry-meta,
+.hentry:nth-of-type(4n+2) .entry-meta:before,
+.hentry:nth-of-type(4n+2) .entry-meta:after {
 	background-color: #eb7039;
 }
 
-.hentry:nth-of-type(4n+2) .entry-title:before,
-.hentry:nth-of-type(4n+2) .page-title:before {
+.hentry:nth-of-type(4n+2) .posted-on:before {
 	border-color: #eb7039 transparent transparent transparent;
 }
 
-.hentry:nth-of-type(4n+2) .entry-title:after,
-.hentry:nth-of-type(4n+2) .page-title:after {
+.hentry:nth-of-type(4n+2) .posted-on:after {
 	border-color: transparent transparent #eb7039 transparent;
 }
 
@@ -1328,19 +1314,17 @@ a:hover, a:active {
 	top: -2em;
 }
 
-.hentry:nth-of-type(4n+3) .entry-header,
-.hentry:nth-of-type(4n+3) .entry-header:before,
-.hentry:nth-of-type(4n+3) .entry-header:after {
+.hentry:nth-of-type(4n+3) .entry-meta,
+.hentry:nth-of-type(4n+3) .entry-meta:before,
+.hentry:nth-of-type(4n+3) .entry-meta:after {
 	background-color: #9ee3ec;
 }
 
-.hentry:nth-of-type(4n+3) .entry-title:before,
-.hentry:nth-of-type(4n+3) .page-title:before {
+.hentry:nth-of-type(4n+3) .posted-on:before {
 	border-color: #9ee3ec transparent transparent transparent;
 }
 
-.hentry:nth-of-type(4n+3) .entry-title:after,
-.hentry:nth-of-type(4n+3) .page-title:after {
+.hentry:nth-of-type(4n+3) .posted-on:after {
 	border-color: transparent transparent #9ee3ec transparent;
 }
 
@@ -1371,19 +1355,17 @@ a:hover, a:active {
 	color: #fff;
 }
 
-.hentry:nth-of-type(4n+4) .entry-header,
-.hentry:nth-of-type(4n+4) .entry-header:before,
-.hentry:nth-of-type(4n+4) .entry-header:after {
+.hentry:nth-of-type(4n+4) .entry-meta,
+.hentry:nth-of-type(4n+4) .entry-meta:before,
+.hentry:nth-of-type(4n+4) .entry-meta:after {
 	background-color: #6f945b;
 }
 
-.hentry:nth-of-type(4n+4) .entry-title:before,
-.hentry:nth-of-type(4n+4) .page-title:before {
+.hentry:nth-of-type(4n+4) .posted-on:before {
 	border-color: #6f945b transparent transparent transparent;
 }
 
-.hentry:nth-of-type(4n+4) .entry-title:after,
-.hentry:nth-of-type(4n+4) .page-title:after {
+.hentry:nth-of-type(4n+4) .posted-on:after {
 	border-color: transparent transparent #6f945b transparent;
 }
 
@@ -1417,9 +1399,10 @@ a:hover, a:active {
 
 .entry-title,
 .page-title {
-	font-size: 32px;
-	font-size: 2rem;
-	margin-bottom: 0;
+	font-size: 40px;
+	font-size: 2.5rem;
+	line-height: 1.3;
+	margin-bottom: 0.35em;
 }
 
 .entry-title a,
@@ -1442,26 +1425,14 @@ a:hover, a:active {
 
 /* Ribbon behind headers */
 
-.entry-header,
-.no-results .page-header,
-.not-found .page-header {
+.entry-meta {
 	background-color: #fff;
 	padding: 0.5em 0;
 	position: relative;
 }
 
-.entry-header .entry-title,
-.no-results .page-header .page-title,
-.not-found .page-header .page-title {
-	margin-top: 0;
-}
-
-.entry-header:before,
-.no-results .page-header:before,
-.not-found .page-header:before,
-.entry-header:after,
-.no-results .page-header:after,
-.not-found .page-header:after {
+.entry-meta:before,
+.entry-meta:after {
 	background-color: #fff;
 	bottom: 0;
 	content: "";
@@ -1471,25 +1442,13 @@ a:hover, a:active {
 	width: 5%;
 }
 
-.entry-header:after,
-.no-results .page-header:after,
-.not-found .page-header:after {
+.entry-meta:after {
 	left: auto;
 	right: -5%;
 }
 
-.entry-title,
-.no-results .page-title,
-.not-found .page-title {
-	position: static;
-}
-
-.entry-title:before,
-.no-results .page-title:before,
-.not-found .page-title:before,
-.entry-title:after,
-.no-results .page-title:after,
-.not-found .page-title:after {
+.posted-on:before,
+.posted-on:after {
 	border-style: solid;
 	content: "";
 	display: none;
@@ -1499,45 +1458,31 @@ a:hover, a:active {
 	width: 0;
 }
 
-.entry-title:before,
-.no-results .page-title:before,
-.not-found .page-title:before {
+.posted-on:before {
 	border-width: 40px 40px 0 0;
 	border-color: #fff transparent transparent transparent;
 	top: 0;
 }
 
-.entry-title:after,
-.no-results .page-title:after,
-.not-found .page-title:after {
+.posted-on:after {
 	border-width: 0 40px 40px 0;
 	border-color: transparent transparent #fff transparent;
 	bottom: 0;
 }
 
 @media screen and (min-width: 37.5em) {
-	.entry-header:before,
-	.entry-header:after,
-	.no-results .page-header:before,
-	.no-results .page-header:after,
-	.not-found .page-header:before,
-	.not-found .page-header:after {
+	.entry-meta:before,
+	.entry-meta:after {
 		left: -200%;
 		width: 200%;
 	}
 
-	.entry-header:after,
-	.no-results .page-header:after,
-	.not-found .page-header:after {
+	.entry-meta:after {
 		display: none;
 	}
 
-	.entry-title:before,
-	.no-results .page-title:before,
-	.not-found .page-title:before,
-	.entry-title:after,
-	.no-results .page-title:after,
-	.not-found .page-title:after {
+	.posted-on:before,
+	.posted-on:after {
 		display: block;
 	}
 }
