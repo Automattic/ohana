@@ -621,6 +621,10 @@ a:hover, a:active {
 	max-width: 92%;
 }
 
+.site-branding {
+	padding-bottom: 1.5em;
+}
+
 .site-title {
 	font-weight: normal;
 	font-family: "Alegreya", Georgia, "Times New Roman", serif;
@@ -650,6 +654,7 @@ a:hover, a:active {
 .site-description {
 	color: #fff;
 	font-family: "Lato", Helvetica, sans-serif;
+	margin-bottom: 0;
 	margin-top: 0;
 	text-align: center;
 	word-wrap: break-word;
@@ -998,7 +1003,7 @@ a:hover, a:active {
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-	padding: 0 0 2em;
+	margin: 0 0 2em;
 	word-wrap: break-word;
 }
 
