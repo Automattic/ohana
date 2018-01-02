@@ -652,11 +652,12 @@ a:hover, a:active {
 }
 
 .site-description {
-	color: #fff;
+	color: #e5f3fb;
 	font-family: "Lato", Helvetica, sans-serif;
 	margin-bottom: 0;
 	margin-top: 0;
 	text-align: center;
+	text-shadow: 0px 2px 1px #54616f;
 	word-wrap: break-word;
 }
 
