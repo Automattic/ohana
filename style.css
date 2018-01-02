@@ -1037,6 +1037,7 @@ a:hover, a:active {
 	.widget-area {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
 	}
 
 	.widget-area .widget {
@@ -2009,6 +2010,38 @@ h3#reply-title {
 	background-color: #546a76;
 	padding: 1em 0;
 	text-align: center;
+}
+
+#infinite-handle span {
+	border: 0;
+	border-radius: 3px;
+	background-color: #3c5766;
+	color: #fff;
+	font-size: 18px;
+	font-size: 1.125rem;
+	font-weight: bold;
+	line-height: 1;
+	padding: .6em 1em;
+}
+
+#infinite-handle button:hover span,
+#infinite-handle button:focus span,
+#infinite-handle button:active span {
+	background-color: #334d5b;
+}
+
+.infinite-loader {
+	background-color: #546a76;
+	color: #fff;
+	padding: 2em 0;
+}
+
+.infinite-loader .spinner {
+	margin-left: 50%;
+}
+
+.infinite-loader .spinner div div {
+	color: inherit !important;
 }
 
 .site-footer {
