@@ -324,7 +324,7 @@ address {
 }
 
 pre {
-	background: rgba(0,0,0,0.15);
+	background: rgba(0,0,0,0.1);
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
@@ -1398,6 +1398,15 @@ a:hover, a:active {
 .page-content {
 	display: block;
 	margin-top: 0.5em;
+}
+
+.entry-content > h1:first-child,
+.entry-content > h2:first-child,
+.entry-content > h3:first-child,
+.entry-content > h4:first-child,
+.entry-content > h5:first-child,
+.entry-content > h6:first-child {
+	margin-top: 0;
 }
 
 .page .entry-content,

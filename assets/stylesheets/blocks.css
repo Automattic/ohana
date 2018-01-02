@@ -48,6 +48,13 @@ p.alignfull {
 		max-width: 1000%;
 	}
 
+	.alignwide {
+		margin-left: calc(25% - 25vw);
+		margin-right: calc(25% - 25vw);
+		width: auto;
+		max-width: 1000%;
+	}
+
 	/* Let's reduce this a bit for blocks with text */
 	.wp-block-text-columns.alignfull,
 	.wp-block-table.alignfull,
@@ -60,14 +67,19 @@ p.alignfull {
 		margin-left: calc(50% - 48vw);
 		margin-right: calc(50% - 48vw);
 	}
-}
 
-@media (min-width: 1100px) {
-	.alignwide {
-		margin-left: -175px;
-		max-width: 2000%;
-		width: 1100px;
+	.wp-block-text-columns.alignwide,
+	.wp-block-table.alignwide,
+	.wp-block-preformatted.alignwide,
+	.wp-block-button.alignwide,
+	.wp-block-pullquote.alignwide,
+	.wp-block-latest-posts.alignwide,
+	.wp-block-categories.alignwide,
+	p.alignwide {
+		margin-left: calc(25% - 23vw);
+		margin-right: calc(25% - 23vw);
 	}
+}
 }
 
 .alignfull > *,
