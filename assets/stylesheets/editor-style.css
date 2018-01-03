@@ -192,6 +192,17 @@ h6.mce-content-body,
 	/* Extra wide images within figure tags don't overflow the content area. */
 }
 
+.editor-visual-editor blockquote {
+	border-left: 6px solid rgba(0,0,0,0.2);
+	font-size: 1.2em;
+	font-style: italic;
+	padding-left: 1em;
+}
+
+.editor-visual-editor blockquote p:last-of-type {
+	margin-bottom: 0;
+}
+
 .editor-visual-editor table,
 .editor-visual-editor th,
 .editor-visual-editor td {
@@ -478,8 +489,19 @@ h6.mce-content-body,
 	display: inline-block; /* helps with smaller, unaligned images */
 }
 /* Blockquotes*/
+.editor-visual-editor .wp-block-quote {
+	border: 0;
+	box-shadow: none;
+	color: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	margin: inherit;
+	padding: 0;
+}
+
 .wp-block-quote cite {
 	color: #999;
+	font-size: 0.8em;
 }
 
 /* Pullquotes */

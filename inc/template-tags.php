@@ -55,9 +55,8 @@ if ( ! function_exists( 'ohana_entry_footer' ) ) :
 					1: Categories string,
 					2: Categories icon,
 					3: list of categories. */
-				printf( '<span class="cat-links"><span class="screen-reader-text">%1$s</span> %2$s %3$s</span>',
+				printf( '<span class="cat-links"><span class="screen-reader-text">%1$s</span> %2$s</span>',
 						 esc_html__( 'Categories:', 'ohana' ),
-						 ohana_get_svg( array( 'icon' => 'category' ) ),
 						 $categories_list );
 			}
 
@@ -68,9 +67,8 @@ if ( ! function_exists( 'ohana_entry_footer' ) ) :
 					1: Tags string,
 					2: Tags icon,
 					3: list of tags. */
-				printf( '<span class="tags-links"><span class="screen-reader-text">%1$s</span> %2$s %3$s</span>',
+				printf( '<span class="tags-links"><span class="screen-reader-text">%1$s</span> %2$s</span>',
 						 esc_html__( 'Tags:', 'ohana' ),
-						 ohana_get_svg( array( 'icon' => 'tag' ) ),
 						 $tags_list );
 			}
 		}

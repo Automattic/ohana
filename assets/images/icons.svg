@@ -12,14 +12,6 @@
 <title>next</title>
 <path d="M6 14h13.2l-4.6-4.6 2.8-2.8 9.4 9.4-9.4 9.4-2.8-2.8 4.6-4.6h-13.2z"></path>
 </symbol>
-<symbol id="icon-tag" viewBox="0 0 32 32">
-<title>tag</title>
-<path d="M22.6 8.6c-0.4-0.4-0.8-0.6-1.4-0.6h-15.2c-1 0-2 1-2 2v12c0 1.2 1 2 2 2h15.2c0.6 0 1-0.2 1.4-0.6l7.4-7.4-7.4-7.4zM20 18c-1 0-2-1-2-2s1-2 2-2 2 1 2 2-1 2-2 2z"></path>
-</symbol>
-<symbol id="icon-category" viewBox="0 0 32 32">
-<title>category</title>
-<path d="M26 10h-10l-1.4-2.8c-0.4-0.8-1-1.2-1.8-1.2h-6.8c-1 0-2 1-2 2v16c0 1.2 1 2 2 2h20c1.2 0 2-0.8 2-2v-12c0-1.2-0.8-2-2-2z"></path>
-</symbol>
 <symbol id="icon-expand" viewBox="0 0 32 32">
 <title>expand</title>
 <path d="M16 25.4l-13.4-13.4 2.8-2.8 10.6 10.6 10.6-10.6 2.8 2.8z"></path>

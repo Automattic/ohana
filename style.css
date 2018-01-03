@@ -419,6 +419,17 @@ figure {
 	/* Extra wide images within figure tags don't overflow the content area. */
 }
 
+blockquote {
+	border-left: 6px solid rgba(0,0,0,0.2);
+	font-size: 1.2em;
+	font-style: italic;
+	padding-left: 1em;
+}
+
+blockquote p:last-of-type {
+	margin-bottom: 0;
+}
+
 table,
 th,
 td {
@@ -1738,10 +1749,6 @@ a:hover, a:active {
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 14px;
-}
-
-.entry-footer .icon {
-	display: none;
 }
 
 /*--------------------------------------------------------------
