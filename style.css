@@ -1431,7 +1431,7 @@ a:hover, a:active {
 	font-size: 32px;
 	font-size: 2rem;
 	line-height: 1.3;
-	margin-bottom: 0;
+	margin-bottom: 0.25em;
 }
 
 .entry-title a,
@@ -1458,7 +1458,7 @@ a:hover, a:active {
 .no-results .page-header,
 .not-found .page-header {
 	background-color: #fff;
-	padding: 0.5em 0;
+	padding: 0.75em 0;
 	position: relative;
 }
 
@@ -1514,7 +1514,7 @@ a:hover, a:active {
 .entry-title:before,
 .no-results .page-title:before,
 .not-found .page-title:before {
-	border-width: 40px 40px 0 0;
+	border-width: 80px 40px 0 0;
 	border-color: #fff transparent transparent transparent;
 	top: 0;
 }
@@ -1522,12 +1522,18 @@ a:hover, a:active {
 .entry-title:after,
 .no-results .page-title:after,
 .not-found .page-title:after {
-	border-width: 0 40px 40px 0;
+	border-width: 0 40px 80px 0;
 	border-color: transparent transparent #fff transparent;
 	bottom: 0;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 50em) {
+	.entry-header,
+	.no-results .page-header,
+	.not-found .page-header {
+		padding-right: 2em;
+	}
+
 	.entry-header:before,
 	.entry-header:after,
 	.no-results .page-header:before,
