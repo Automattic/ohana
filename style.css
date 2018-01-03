@@ -2154,11 +2154,11 @@ object {
 }
 
 .wp-caption .wp-caption-text {
-	font-size: 0.8em;
 	margin: 0.8075em 0;
 }
 
 .wp-caption-text {
+	font-size: 0.85em;
 	text-align: center;
 }
 
@@ -2166,11 +2166,12 @@ object {
 ## Galleries
 --------------------------------------------------------------*/
 .gallery {
-	margin-bottom: 1.5em;
+	margin: 0 -1% 1.5em;
 }
 
 .gallery-item {
 	display: inline-block;
+	padding: 0 1%;
 	text-align: center;
 	vertical-align: top;
 	width: 100%;
