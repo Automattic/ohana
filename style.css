@@ -1695,11 +1695,22 @@ a:hover, a:active {
 }
 
 .entry-footer > span {
-	margin-right: 1.0em;
+	margin-right: .5em;
+}
+
+.entry-footer > span:after {
+	content: "//";
+	display: inline-block;
+	margin-left: .5em;
+	opacity: 0.5;
 }
 
 .entry-footer > span:last-child {
 	margin-right: 0;
+}
+
+.entry-footer > span:last-child:after {
+	display: none;
 }
 
 .posts-navigation {
