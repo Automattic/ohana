@@ -1727,7 +1727,7 @@ a:hover, a:active {
 }
 
 .entry-footer .cat-links .screen-reader-text,
-.entry-footer .tag-links .screen-reader-text {
+.entry-footer .tags-links .screen-reader-text {
 	clip: auto;
 	clip-path: none;
 	height: auto;
