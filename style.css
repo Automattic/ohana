@@ -1660,7 +1660,7 @@ a:hover, a:active {
 .search article.hentry:nth-of-type(4n+1) a:visited,
 .search article.hentry:nth-of-type(4n+1) .entry-footer,
 .search article.hentry:nth-of-type(4n+1) .entry-meta {
-	color: #CF6A3D;
+	color: #567B42;
 }
 
 .blog article.hentry:nth-of-type(4n+2) a,
@@ -1706,11 +1706,22 @@ a:hover, a:active {
 }
 
 .entry-footer > span {
-	margin-right: 1.0em;
+	margin-right: .5em;
+}
+
+.entry-footer > span:after {
+	content: "//";
+	display: inline-block;
+	margin-left: .5em;
+	opacity: 0.5;
 }
 
 .entry-footer > span:last-child {
 	margin-right: 0;
+}
+
+.entry-footer > span:last-child:after {
+	display: none;
 }
 
 .posts-navigation {
@@ -1738,7 +1749,7 @@ a:hover, a:active {
 }
 
 .entry-footer .cat-links .screen-reader-text,
-.entry-footer .tag-links .screen-reader-text {
+.entry-footer .tags-links .screen-reader-text {
 	clip: auto;
 	clip-path: none;
 	height: auto;
