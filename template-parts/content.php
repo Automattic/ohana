@@ -24,6 +24,7 @@
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
+		<div class="ribbon-end"></div>
 	</header><!-- .entry-header -->
 
 	<?php ohana_post_thumbnail(); ?>
