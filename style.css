@@ -1191,7 +1191,7 @@ a:hover, a:active {
 .blog article.hentry:nth-of-type(4n+2),
 .archive article.hentry:nth-of-type(4n+2),
 .search article.hentry:nth-of-type(4n+2) {
-	padding-top: 15px;
+	padding-top: 13px;
 }
 
 .blog article.hentry:nth-of-type(4n+3),
@@ -1371,7 +1371,7 @@ a:hover, a:active {
 .blog article.hentry:nth-of-type(4n+3):before,
 .archive article.hentry:nth-of-type(4n+3):before,
 .search article.hentry:nth-of-type(4n+3):before {
-	top: -11px;
+	top: -10px;
 }
 
 @media only screen and (min-width: 37.5em) {
