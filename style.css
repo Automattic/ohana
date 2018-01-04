@@ -1278,14 +1278,16 @@ a:hover, a:active {
 .hentry:nth-of-type(4n+1) .page-title:before,
 .error404 section.not-found .page-title:before,
 .search-no-results .not-found .page-title:before {
-	border-color: #cedca5 transparent transparent transparent;
+	background: linear-gradient(to right bottom, #cedca5 50%, transparent 50%);
+	top: 0;
 }
 
 .hentry:nth-of-type(4n+1) .entry-title:after,
 .hentry:nth-of-type(4n+1) .page-title:after,
 .error404 section.not-found .page-title:after,
 .search-no-results .not-found .page-title:after {
-	border-color: transparent transparent #cedca5 transparent;
+	background: linear-gradient(to right top, #cedca5 50%, transparent 50%);
+	bottom: 0;
 }
 
 /* Orange */
@@ -1309,12 +1311,14 @@ a:hover, a:active {
 
 .hentry:nth-of-type(4n+2) .entry-title:before,
 .hentry:nth-of-type(4n+2) .page-title:before {
-	border-color: #eb7039 transparent transparent transparent;
+	background: linear-gradient(to right bottom, #eb7039 50%, transparent 50%);
+	top: 0;
 }
 
 .hentry:nth-of-type(4n+2) .entry-title:after,
 .hentry:nth-of-type(4n+2) .page-title:after {
-	border-color: transparent transparent #eb7039 transparent;
+	background: linear-gradient(to right top, #eb7039 50%, transparent 50%);
+	bottom: 0;
 }
 
 .blog article.hentry:nth-of-type(4n+2) button,
@@ -1389,7 +1393,6 @@ a:hover, a:active {
 	.search article.hentry:nth-of-type(4n+3):before {
 		top: -25px;
 	}
-
 }
 
 .hentry:nth-of-type(4n+3) .entry-header,
@@ -1400,12 +1403,14 @@ a:hover, a:active {
 
 .hentry:nth-of-type(4n+3) .entry-title:before,
 .hentry:nth-of-type(4n+3) .page-title:before {
-	border-color: #9ee3ec transparent transparent transparent;
+	background: linear-gradient(to right bottom, #9ee3ec 50%, transparent 50%);
+	top: 0;
 }
 
 .hentry:nth-of-type(4n+3) .entry-title:after,
 .hentry:nth-of-type(4n+3) .page-title:after {
-	border-color: transparent transparent #9ee3ec transparent;
+	background: linear-gradient(to right top, #9ee3ec 50%, transparent 50%);
+	bottom: 0;
 }
 
 /* Dark Green */
@@ -1443,12 +1448,14 @@ a:hover, a:active {
 
 .hentry:nth-of-type(4n+4) .entry-title:before,
 .hentry:nth-of-type(4n+4) .page-title:before {
-	border-color: #6f945b transparent transparent transparent;
+	background: linear-gradient(to right bottom, #6f945b 50%, transparent 50%);
+	top: 0;
 }
 
 .hentry:nth-of-type(4n+4) .entry-title:after,
 .hentry:nth-of-type(4n+4) .page-title:after {
-	border-color: transparent transparent #6f945b transparent;
+	background: linear-gradient(to right top, #6f945b 50%, transparent 50%);
+	bottom: 0;
 }
 
 .updated:not(.published) {
@@ -1564,28 +1571,25 @@ a:hover, a:active {
 .entry-title:after,
 .no-results .page-title:after,
 .not-found .page-title:after {
-	border-style: solid;
 	content: "";
 	display: none;
-	height: 0;
+	height: 50%;
 	left: 100%;
 	position: absolute;
-	width: 0;
+	width: 25px;
 }
 
 .entry-title:before,
 .no-results .page-title:before,
 .not-found .page-title:before {
-	border-width: 80px 40px 0 0;
-	border-color: #fff transparent transparent transparent;
+	background: linear-gradient(to right bottom, #fff 50%, transparent 50%);
 	top: 0;
 }
 
 .entry-title:after,
 .no-results .page-title:after,
 .not-found .page-title:after {
-	border-width: 0 40px 80px 0;
-	border-color: transparent transparent #fff transparent;
+	background: linear-gradient(to right top, #fff 50%, transparent 50%);
 	bottom: 0;
 }
 
@@ -1731,8 +1735,6 @@ a:hover, a:active {
 		padding-bottom: 49px;
 	}
 }
-
-
 
 .blog article.hentry:nth-of-type(4n+1) a,
 .blog article.hentry:nth-of-type(4n+1) a:visited,
