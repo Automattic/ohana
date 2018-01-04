@@ -1690,14 +1690,49 @@ a:hover, a:active {
 .entry-footer {
 	font-size: 0.9em;
 	font-family: "Lato", Helvetica, sans-serif;
-	padding-bottom: 1em;
+	padding-bottom: 29px;
 }
 
-@media screen and (min-width: 37.5em) {
+.blog article.hentry:nth-of-type(4n+1) .entry-footer,
+.blog article.hentry:nth-of-type(4n+1) .entry-footer,
+.blog article.hentry:nth-of-type(4n+1) .entry-footer {
+	padding-bottom: 10px;
+}
+
+.blog article.hentry:nth-of-type(4n+3) .entry-footer,
+.blog article.hentry:nth-of-type(4n+3) .entry-footer,
+.blog article.hentry:nth-of-type(4n+3) .entry-footer,
+.blog article.hentry:nth-of-type(4n+4) .entry-footer,
+.blog article.hentry:nth-of-type(4n+4) .entry-footer,
+.blog article.hentry:nth-of-type(4n+4) .entry-footer {
+	padding-bottom: 24px;
+}
+
+@media only screen and (min-width: 37.5em) {
 	.entry-footer {
-		padding-bottom: 4em;
+		padding-bottom: 54px;
+	}
+
+	.blog article.hentry:nth-of-type(4n+1) .entry-footer,
+	.blog article.hentry:nth-of-type(4n+1) .entry-footer,
+	.blog article.hentry:nth-of-type(4n+1) .entry-footer {
+		padding-bottom: 34px;
+	}
+
+	.blog article.hentry:nth-of-type(4n+3) .entry-footer,
+	.blog article.hentry:nth-of-type(4n+3) .entry-footer,
+	.blog article.hentry:nth-of-type(4n+3) .entry-footer {
+		padding-bottom: 43px;
+	}
+
+	.blog article.hentry:nth-of-type(4n+4) .entry-footer,
+	.blog article.hentry:nth-of-type(4n+4) .entry-footer,
+	.blog article.hentry:nth-of-type(4n+4) .entry-footer {
+		padding-bottom: 49px;
 	}
 }
+
+
 
 .blog article.hentry:nth-of-type(4n+1) a,
 .blog article.hentry:nth-of-type(4n+1) a:visited,
