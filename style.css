@@ -308,7 +308,7 @@ h6 {
 }
 
 p {
-	margin-bottom: 1.5em;
+	margin: 0 0 1.5em;
 }
 
 dfn, cite, em, i {
@@ -1467,7 +1467,7 @@ a:hover, a:active {
 .post-thumbnail,
 .page-content {
 	display: block;
-	margin-top: 0.5em;
+	margin-top: 1.5em;
 }
 
 .entry-content > h1:first-child,
