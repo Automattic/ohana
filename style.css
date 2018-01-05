@@ -643,7 +643,7 @@ a:hover, a:active {
 	font-size: 36px;
 	font-size: 2.25rem;
 	line-height: 1.25;
-	margin-bottom: 0;
+	margin: 0.67em 0 0;
 	text-align: center;
 	text-shadow: 0px 3px 1px #54616f;
 	word-wrap: break-word;
@@ -854,7 +854,7 @@ a:hover, a:active {
 
 	.main-navigation ul ul li {
 		border-bottom: 1px dashed rgba(255,255,255,0.5);
-		padding-bottom: .5em;
+		padding: 0.15em 0;
 		width: 100%;
 	}
 
@@ -1626,21 +1626,6 @@ a:hover, a:active {
 	}
 }
 
-/* Entry content */
-
-.entry-header,
-.entry-content,
-.entry-summary,
-.entry-footer,
-.page-header,
-.page-content,
-.post-thumbnail {
-	max-width: 92%;
-	margin-left: auto;
-	margin-right: auto;
-	word-wrap: break-word;
-}
-
 /* Password Protected form */
 
 .post-password-form input {
@@ -2183,7 +2168,20 @@ h3#reply-title {
 	max-width: 92%;
 }
 
-@media all and (min-width: 769px) {
+.entry-header,
+.entry-content,
+.entry-summary,
+.entry-footer,
+.page-header,
+.page-content,
+.post-thumbnail {
+	max-width: 92%;
+	margin-left: auto;
+	margin-right: auto;
+	word-wrap: break-word;
+}
+
+@media screen and ( min-width: 770px ) {
 	.entry-header,
 	.entry-content,
 	.entry-summary,
@@ -2198,10 +2196,11 @@ h3#reply-title {
 	.comments-title,
 	.comment-reply-title,
 	.comment-form {
-		max-width: 750px;
+		max-width: 730px;
 	}
 }
-@media all and (min-width: 1200px) {
+
+@media screen and (min-width: 1200px) {
 	.site-branding,
 	#site-navigation ul,
 	.site-info {

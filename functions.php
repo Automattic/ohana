@@ -86,8 +86,9 @@ if ( ! function_exists( 'ohana_setup' ) ) :
 		 * @link https://wordpress.org/gutenberg/handbook/reference/theme-support/
 		 */
 		add_theme_support( 'gutenberg', array(
+			// Theme supports wide images, galleries and videos.
 			'wide-images' => true,
-			'full-images' => true,
+			// Make specific theme colours available in the editor.
 			'colors' => array(
 				'#dceab2',
 				'#cedca5',
