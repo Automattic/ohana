@@ -707,7 +707,7 @@ a:hover, a:active {
 .main-navigation ul a {
 	border-bottom: 0;
 	color: #fff;
-	display: inline-block;
+	display: block;
 	padding: 0.5em 0.75em;
 }
 
@@ -722,7 +722,7 @@ a:hover, a:active {
 }
 
 .main-navigation ul ul {
-	padding: 0.5em 0 0.5em 1em;
+	padding: 0 0 0.5em 1em;
 	text-align: left;
 }
 
@@ -739,15 +739,7 @@ a:hover, a:active {
 .main-navigation ul ul a {
 	color: #fff;
 	display: block;
-	padding: 0 0.75em;
-}
-
-.main-navigation ul.nav-menu > li > ul > li a {
-	padding-top: 0.4em;
-}
-
-.main-navigation ul.nav-menu > li > ul > li:first-child a {
-	padding-top: 0;
+	padding: 0.25em 0.75em;
 }
 
 .main-navigation ul ul ul {
@@ -825,6 +817,10 @@ a:hover, a:active {
 		position: relative;
 	}
 
+	.main-navigation ul a {
+		display: inline-block;
+	}
+
 	.main-navigation ul a .icon {
 		display: inline-block;
 		margin-left: 6px;
@@ -854,7 +850,6 @@ a:hover, a:active {
 
 	.main-navigation ul ul li {
 		border-bottom: 1px dashed rgba(255,255,255,0.5);
-		padding: 0.15em 0;
 		width: 100%;
 	}
 
