@@ -489,9 +489,13 @@ input[type="submit"] {
 }
 
 button:hover,
+button:focus,
 input[type="button"]:hover,
+input[type="button"]:focus,
 input[type="reset"]:hover,
-input[type="submit"]:hover {
+input[type="reset"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
 	background-color: #c1582a;
 }
 
@@ -524,7 +528,7 @@ textarea {
 	color: #666;
 	border: 1px solid #ccc;
 	border-radius: 3px;
-	padding: 3px;
+	padding: 5px 3px 6px;
 	-webkit-appearance: none;
 }
 
@@ -1089,6 +1093,10 @@ a:hover, a:active {
 	text-align: center;
 }
 
+.widget_calendar td {
+	word-wrap: normal;
+}
+
 /* Goodreads */
 
 .widget_goodreads div[class^="gr_custom_container"] {
@@ -1333,17 +1341,29 @@ a:hover, a:active {
 }
 
 .blog article.hentry:nth-of-type(4n+2) button:hover,
+.blog article.hentry:nth-of-type(4n+2) button:focus,
 .blog article.hentry:nth-of-type(4n+2) input[type="button"]:hover,
+.blog article.hentry:nth-of-type(4n+2) input[type="button"]:focus,
 .blog article.hentry:nth-of-type(4n+2) input[type="reset"]:hover,
+.blog article.hentry:nth-of-type(4n+2) input[type="reset"]:focus,
 .blog article.hentry:nth-of-type(4n+2) input[type="submit"]:hover,
+.blog article.hentry:nth-of-type(4n+2) input[type="submit"]:focus,
 .archive article.hentry:nth-of-type(4n+2) button:hover,
+.archive article.hentry:nth-of-type(4n+2) button:focus,
 .archive article.hentry:nth-of-type(4n+2) input[type="button"]:hover,
+.archive article.hentry:nth-of-type(4n+2) input[type="button"]:focus,
 .archive article.hentry:nth-of-type(4n+2) input[type="reset"]:hover,
+.archive article.hentry:nth-of-type(4n+2) input[type="reset"]:focus,
 .archive article.hentry:nth-of-type(4n+2) input[type="submit"]:hover,
+.archive article.hentry:nth-of-type(4n+2) input[type="submit"]:focus,
 .search article.hentry:nth-of-type(4n+2) button:hover,
+.search article.hentry:nth-of-type(4n+2) button:focus,
 .search article.hentry:nth-of-type(4n+2) input[type="button"]:hover,
+.search article.hentry:nth-of-type(4n+2) input[type="button"]:focus,
 .search article.hentry:nth-of-type(4n+2) input[type="reset"]:hover,
-.search article.hentry:nth-of-type(4n+2) input[type="submit"]:hover {
+.search article.hentry:nth-of-type(4n+2) input[type="reset"]:focus,
+.search article.hentry:nth-of-type(4n+2) input[type="submit"]:hover,
+.search article.hentry:nth-of-type(4n+2) input[type="submit"]:focus {
 	background-color: #cedca5;
 }
 
