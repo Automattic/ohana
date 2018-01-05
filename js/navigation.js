@@ -78,13 +78,20 @@
 	 */
 	( function( container ) {
 		var touchStartFn, i,
-			parentLink = container.querySelectorAll( '.menu-item-has-children > a, .page_item_has_children > a' );
+			parentLink = container.querySelectorAll( '.menu-item-has-children > a, .page_item_has_children > a' ),
+			mobileMenuDisplay = button.currentStyle ? button.currentStyle.display : getComputedStyle( button, null ).display;
 
 		if ( 'ontouchstart' in window ) {
+
 			touchStartFn = function( e ) {
 				var menuItem = this.parentNode, i;
 
 				if ( ! menuItem.classList.contains( 'focus' ) ) {
+
+					if ( 'block' === mobileMenuDisplay ) {
+						return;
+					}
+
 					e.preventDefault();
 					for ( i = 0; i < menuItem.parentNode.children.length; ++i ) {
 						if ( menuItem === menuItem.parentNode.children[i] ) {
