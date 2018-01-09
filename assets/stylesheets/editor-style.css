@@ -562,3 +562,22 @@ h6.mce-content-body,
 	color: inherit;
 	opacity: 0.8;
 }
+
+/* Categories */
+
+.editor-block-list__block[data-type="core/categories"] .wp-block-categories ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.editor-block-list__block[data-type="core/categories"] .wp-block-categories__list li:not(:last-child),
+.editor-block-list__block[data-type="core/categories"] .wp-block-categories li:not(:last-child) {
+	border-bottom: 1px dashed rgba(0,0,0,0.2);
+	padding: 0.25em 0;
+}
+
+.editor-block-list__block[data-type="core/categories"] .wp-block-categories__list ul ul,
+.editor-block-list__block[data-type="core/categories"] .wp-block-categories ul ul {
+	padding-left: 2em;
+}

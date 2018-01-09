@@ -255,5 +255,21 @@ p.alignfull {
 
 /* Categories */
 .wp-block-categories {}
-.wp-block-categories-list {}
+
+.wp-block-categories-list ul,
+.wp-block-categories-list li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.wp-block-categories-list li:not(:last-child) {
+	border-bottom: 1px dashed rgba(0,0,0,0.2);
+	padding: 0.25em 0;
+}
+
+.wp-block-categories-list ul ul {
+	padding-left: 2em;
+}
+
 .wp-block-categories-dropdown {}
