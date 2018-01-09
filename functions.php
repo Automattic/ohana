@@ -41,6 +41,7 @@ if ( ! function_exists( 'ohana_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
+		add_image_size( 'ohana-post-thumbnail', 750, 9999 );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(

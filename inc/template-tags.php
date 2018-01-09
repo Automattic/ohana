@@ -127,7 +127,7 @@ function ohana_post_thumbnail() {
 	?>
 
 	<div class="post-thumbnail">
-		<?php the_post_thumbnail(); ?>
+		<?php the_post_thumbnail( 'ohana-post-thumbnail' ); ?>
 	</div><!-- .post-thumbnail -->
 
 	<?php else : ?>
