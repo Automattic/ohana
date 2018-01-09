@@ -80,7 +80,6 @@ p.alignfull {
 		margin-right: calc(25% - 23vw);
 	}
 }
-}
 
 .alignfull > *,
 .alignwide > * {
@@ -212,7 +211,15 @@ p.alignfull {
 }
 
 /* Buttons */
-.wp-block-button {}
+.wp-block-button {
+	text-align: center;
+}
+
+.wp-block-button.aligncenter,
+.wp-block-button.alignwide,
+.wp-block-button.alignfull {
+	display: block;
+}
 
 /* Text Columns */
 @media only screen and ( max-width: 32em ) {
