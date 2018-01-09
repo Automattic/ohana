@@ -2,6 +2,22 @@
 Editor Styles for Ohana
 --------------------------------------------------------------*/
 
+/* Widths */
+
+@media screen and ( min-width: 770px ) {
+	.editor-visual-editor .editor-post-title,
+	.editor-visual-editor .editor-block-list__block {
+		max-width: 820px; /* 730px - 90px */
+	}
+}
+
+@media screen and (min-width: 37.5em) {
+	*[class^="wp-block-"].alignleft,
+	*[class^="wp-block-"].alignright {
+		max-width: 75%;
+	}
+}
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
