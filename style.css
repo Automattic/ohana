@@ -1552,6 +1552,11 @@ a:hover, a:active {
 	margin-top: 0;
 }
 
+.page-title,
+.page .entry-title {
+	margin-bottom: 0;
+}
+
 .entry-header:before,
 .no-results .page-header:before,
 .not-found .page-header:before,
