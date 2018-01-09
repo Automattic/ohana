@@ -29,12 +29,14 @@
 	max-width: 110%;
 }
 
+/* Text-based blocks with alignfull */
 .wp-block-text-columns.alignfull,
 .wp-block-preformatted.alignfull,
 .wp-block-button.alignfull,
 .wp-block-pullquote.alignfull,
 .wp-block-latest-posts.alignfull,
 .wp-block-categories.alignfull,
+.wp-block-verse.alignfull,
 p.alignfull {
 	margin-left: auto;
 	margin-right: auto;
@@ -63,6 +65,7 @@ p.alignfull {
 	.wp-block-pullquote.alignfull,
 	.wp-block-latest-posts.alignfull,
 	.wp-block-categories.alignfull,
+	.wp-block-verse.alignfull,
 	p.alignfull {
 		margin-left: calc(50% - 48vw);
 		margin-right: calc(50% - 48vw);
@@ -201,8 +204,11 @@ p.alignfull {
 
 /* Verse */
 .wp-block-verse {
-	font-family: inherit;
-	font-size: inherit;
+	background-color: transparent;
+	font-family: "Alegreya", Georgia, "Times New Roman", serif;
+	font-size: 1.1em;
+	font-style: italic;
+	padding: 0;
 }
 
 /* Separator */

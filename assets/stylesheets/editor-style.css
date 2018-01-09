@@ -545,8 +545,11 @@ h6.mce-content-body,
 
 /* Verse */
 .wp-block-verse {
-	font-family: inherit;
-	font-size: inherit;
+	background-color: transparent;
+	font-family: "Alegreya", Georgia, "Times New Roman", serif;
+	font-size: 1.1em;
+	font-style: italic;
+	padding: 0;
 }
 
 /* Separator */
