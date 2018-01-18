@@ -1909,7 +1909,7 @@ a:hover, a:active {
 }
 
 .entry-author .author-avatar {
-	float: left;
+	display: none;
 }
 
 .entry-author .author-avatar img {
@@ -1922,9 +1922,16 @@ a:hover, a:active {
 	width: 90px;
 }
 
-.author-heading,
-.author-bio {
-	margin-left: 110px;
+@media screen and (min-width: 37.5em) {
+	.entry-author .author-avatar {
+		float: left;
+		display: block;
+	}
+
+	.author-heading,
+	.author-bio {
+		margin-left: 110px;
+	}
 }
 
 .author-title {
