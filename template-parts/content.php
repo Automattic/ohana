@@ -56,4 +56,7 @@
 	<footer class="entry-footer">
 		<?php ohana_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
+
+	<?php ohana_author_bio(); ?>
+
 </article><!-- #post-<?php the_ID(); ?> -->

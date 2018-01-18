@@ -29,13 +29,16 @@ function ohana_jetpack_setup() {
 
 	// Add theme support for Content Options.
 	add_theme_support( 'jetpack-content-options', array(
-		'post-details'    => array(
-			'stylesheet' => 'ohana-style',
-			'date'       => '.posted-on',
-			'categories' => '.cat-links',
-			'tags'       => '.tags-links',
-			'author'     => '.byline',
-			'comment'    => '.comments-link',
+		'blog-display'   => 'content',
+		'author-bio'     => true,
+		'avatar-default' => false,
+		'post-details'   => array(
+			'stylesheet'   => 'ohana-style',
+			'date'         => '.posted-on',
+			'categories'   => '.cat-links',
+			'tags'         => '.tags-links',
+			'author'       => '.byline',
+			'comment'      => '.comments-link',
 		),
 		'featured-images' => array(
 			'archive'          => true,
@@ -61,3 +64,23 @@ function ohana_infinite_scroll_render() {
 		endif;
 	}
 }
+
+
+/**
+ * Return early if Author Bio is not available.
+ */
+function ohana_author_bio() {
+	if ( ! function_exists( 'jetpack_author_bio' ) ) {
+		get_template_part( 'template-parts/content', 'author' );
+	} else {
+		jetpack_author_bio();
+	}
+}
+/**
+ * Author Bio Avatar Size.
+ */
+function ohana_author_bio_avatar_size() {
+	return 90; // in px
+}
+add_filter( 'jetpack_author_bio_avatar_size', 'ohana_author_bio_avatar_size' );
+
