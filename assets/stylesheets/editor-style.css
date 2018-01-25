@@ -146,8 +146,90 @@ h6.mce-content-body,
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
-.editor-visual-editor {
+.editor-layout__editor .editor-visual-editor {
+	background-color: #eef7d2;
 	box-sizing: border-box;
+}
+
+/* Post/Page title */
+.editor-post-title {
+	background-color: #cedca5;
+	padding: 0.75em 0;
+	position: relative;
+}
+
+.editor-post-title:before,
+.editor-post-title:after {
+	background-color: #cedca5;
+	bottom: 0;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -5%;
+	width: 5%;
+}
+
+.editor-post-title:after {
+	left: auto;
+	right: -5%;
+}
+
+.editor-post-title h1 {
+	margin-bottom: 0.25em;
+	position: static;
+}
+
+.editor-post-title h1:before,
+.editor-post-title h1:after {
+	content: "";
+	display: none;
+	height: 50%;
+	left: 100%;
+	position: absolute;
+	width: 25px;
+}
+
+.editor-post-title h1:before {
+	background: linear-gradient(to right bottom, #cedca5 50%, transparent 50%);
+	top: 0;
+}
+
+.editor-post-title h1:after {
+	background: linear-gradient(to right top, #cedca5 50%, transparent 50%);
+	bottom: 0;
+}
+
+@media screen and (min-width: 50em) {
+	.editor-post-title {
+		padding-right: 2em;
+	}
+
+	.editor-post-title:before,
+	.editor-post-title:after {
+		left: -200%;
+		width: 200%;
+	}
+
+	.editor-post-title:after {
+		display: none;
+	}
+
+	.editor-post-title h1:before,
+	.editor-post-title h1:after {
+		display: block;
+	}
+}
+
+.editor-block-list__sibling-inserter .editor-inserter__toggle.components-button {
+	background: #eef7d2;
+}
+
+.editor-post-title textarea {
+	background-color: transparent;
+}
+
+.editor-block-list__block:not(.is-multi-selected) .wp-block-paragraph {
+	background-color: transparent;
 }
 
 .editor-visual-editor *,
