@@ -152,6 +152,12 @@ p.alignfull {
 		width: 100vw;
 	}
 }
+
+.wp-block-cover-image {
+	height: 75vh;
+	min-height: 400px;
+}
+
 .wp-block-cover-image.has-background-dim {}
 .wp-block-cover-image.has-parallax {}
 
@@ -218,10 +224,22 @@ p.alignfull {
 
 /* Buttons */
 .wp-block-button {
+	border-radius: 3px;
+	line-height: 1.25;
+	padding: .6em 1em;
 	text-align: center;
 }
 
-.wp-block-button.aligncenter,
+.wp-block-button a {
+	border: 0;
+	font-weight: bold;
+}
+
+.wp-block-button:not([style]) a:hover,
+.wp-block-button:not([style]) a:focus {
+	color: #fff;
+}
+
 .wp-block-button.alignwide,
 .wp-block-button.alignfull {
 	display: block;

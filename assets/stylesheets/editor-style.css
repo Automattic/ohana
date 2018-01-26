@@ -152,9 +152,10 @@ h6.mce-content-body,
 }
 
 /* Post/Page title */
-.editor-post-title {
+.editor-visual-editor .editor-post-title {
 	background-color: #cedca5;
-	padding: 0.75em 0;
+	padding-bottom: 0;
+	padding-top: 0;
 	position: relative;
 }
 
@@ -620,6 +621,16 @@ h6.mce-content-body,
 	opacity: 0.8;
 }
 
+/* Cover Images */
+.editor-visual-editor .editor-block-list__block[data-type="core/cover-image"] {
+	max-width: 100%;
+}
+
+.editor-block-list__block .wp-block-cover-image {
+	height: 50vh;
+	min-height: 400px;
+}
+
 /* Tables */
 .wp-block-table {
 	display: table;
@@ -637,6 +648,32 @@ h6.mce-content-body,
 /* Separator */
 .wp-block-separator {
 	border-bottom: 2px dashed rgba(0,0,0,.15);
+}
+
+/* Buttons */
+
+.wp-block-button {
+	border-radius: 3px;
+	line-height: 1.25;
+	padding: .6em 1em;
+	text-align: center;
+}
+
+.wp-block-button a {
+	border: 0;
+	font-weight: bold;
+}
+
+.wp-block-button:not([style]) a:hover,
+.wp-block-button:not([style]) a:focus {
+	color: #fff;
+}
+
+.editor-block-list__block[data-type="core/button"][data-align="wide"],
+.editor-block-list__block[data-type="core/button"][data-align="full"],
+.wp-block-button.alignwide,
+.wp-block-button.alignfull {
+	display: block;
 }
 
 /* Latest Posts */
