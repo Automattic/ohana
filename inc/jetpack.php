@@ -64,23 +64,3 @@ function ohana_infinite_scroll_render() {
 		endif;
 	}
 }
-
-
-/**
- * Return early if Author Bio is not available.
- */
-function ohana_author_bio() {
-	if ( ! function_exists( 'jetpack_author_bio' ) ) {
-		get_template_part( 'template-parts/content', 'author' );
-	} else {
-		jetpack_author_bio();
-	}
-}
-/**
- * Author Bio Avatar Size.
- */
-function ohana_author_bio_avatar_size() {
-	return 90; // in px
-}
-add_filter( 'jetpack_author_bio_avatar_size', 'ohana_author_bio_avatar_size' );
-

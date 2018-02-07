@@ -219,6 +219,25 @@ function ohana_widget_tag_cloud_args( $args ) {
 add_filter( 'widget_tag_cloud_args', 'ohana_widget_tag_cloud_args' );
 
 /**
+ * Return early if Author Bio is not available.
+ */
+function ohana_author_bio() {
+	if ( ! function_exists( 'jetpack_author_bio' ) ) {
+		get_template_part( 'template-parts/author', 'bio' );
+	} else {
+		jetpack_author_bio();
+	}
+}
+
+/**
+ * Author Bio Avatar Size.
+ */
+function ohana_author_bio_avatar_size() {
+	return 90; // in px
+}
+add_filter( 'jetpack_author_bio_avatar_size', 'ohana_author_bio_avatar_size' );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
