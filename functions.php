@@ -223,7 +223,7 @@ add_filter( 'widget_tag_cloud_args', 'ohana_widget_tag_cloud_args' );
  */
 function ohana_author_bio() {
 	if ( ! function_exists( 'jetpack_author_bio' ) ) {
-		get_template_part( 'template-parts/author', 'bio' );
+		get_template_part( 'template-parts/content', 'author' );
 	} else {
 		jetpack_author_bio();
 	}
