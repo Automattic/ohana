@@ -5,8 +5,8 @@ Editor Styles for Ohana
 /* Widths */
 
 @media screen and ( min-width: 770px ) {
-	.editor-visual-editor .editor-post-title,
-	.editor-visual-editor .editor-block-list__block {
+	.edit-post-visual-editor .editor-post-title,
+	.edit-post-visual-editor .editor-block-list__block {
 		max-width: 820px; /* 730px - 90px */
 	}
 }
@@ -21,18 +21,22 @@ Editor Styles for Ohana
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-.editor-visual-editor,
-.editor-visual-editor p,
-.editor-visual-editor button,
-.editor-visual-editor input,
-.editor-visual-editor select,
-.editor-visual-editor optgroup,
-.editor-visual-editor textarea {
+.edit-post-visual-editor,
+.edit-post-visual-editor p,
+.edit-post-visual-editor button,
+.edit-post-visual-editor input,
+.edit-post-visual-editor select,
+.edit-post-visual-editor optgroup,
+.edit-post-visual-editor textarea {
 	color: #444444;
 	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 18px;
 	font-size: 1.125rem;
 	line-height: 1.5;
+}
+
+.blocks-rich-text__tinymce.mce-content-body {
+	line-height: inherit;
 }
 
 h1.mce-content-body,
@@ -41,15 +45,22 @@ h3.mce-content-body,
 h4.mce-content-body,
 h5.mce-content-body,
 h6.mce-content-body,
-.mce-content-body h1,
-.editor-visual-editor textarea.editor-post-title__input,
+.edit-post-visual-editor textarea.editor-post-title__input,
 .mce-content-body h2,
 .mce-content-body h3,
 .mce-content-body h4,
 .mce-content-body h5,
-.mce-content-body h6 {
+.mce-content-body h6,
+#poststuff h1,
+#poststuff h2,
+#poststuff h3,
+#poststuff h4,
+#poststuff h5,
+#poststuff h6 {
 	clear: both;
 	font-family: "Alegreya", Georgia, "Times New Roman", serif;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 .mce-content-body h1 {
@@ -57,12 +68,13 @@ h6.mce-content-body,
 	font-size: 2.625rem;
 }
 
-.editor-visual-editor textarea.editor-post-title__input {
+.edit-post-visual-editor textarea.editor-post-title__input {
 	font-size: 32px;
 	font-size: 2rem;
 }
 
-.mce-content-body h2 {
+.mce-content-body h2,
+#poststuff .wp-block-heading h2 {
 	font-size: 36px;
 	font-size: 2.25rem;
 }
@@ -146,13 +158,13 @@ h6.mce-content-body,
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
-.editor-layout__editor .editor-visual-editor {
+.edit-post-layout {
 	background-color: #eef7d2;
 	box-sizing: border-box;
 }
 
 /* Post/Page title */
-.editor-visual-editor .editor-post-title {
+.edit-post-layout .editor-post-title {
 	background-color: #cedca5;
 	padding-bottom: 0;
 	padding-top: 0;
@@ -175,13 +187,13 @@ h6.mce-content-body,
 	right: -5%;
 }
 
-.editor-post-title h1 {
+.editor-post-title > div {
 	margin-bottom: 0.25em;
 	position: static;
 }
 
-.editor-post-title h1:before,
-.editor-post-title h1:after {
+.editor-post-title > div:before,
+.editor-post-title > div:after {
 	content: "";
 	display: none;
 	height: 50%;
@@ -190,12 +202,12 @@ h6.mce-content-body,
 	width: 25px;
 }
 
-.editor-post-title h1:before {
+.editor-post-title > div:before {
 	background: linear-gradient(to right bottom, #cedca5 50%, transparent 50%);
 	top: 0;
 }
 
-.editor-post-title h1:after {
+.editor-post-title > div:after {
 	background: linear-gradient(to right top, #cedca5 50%, transparent 50%);
 	bottom: 0;
 }
@@ -215,8 +227,8 @@ h6.mce-content-body,
 		display: none;
 	}
 
-	.editor-post-title h1:before,
-	.editor-post-title h1:after {
+	.editor-post-title > div:before,
+	.editor-post-title > div:after {
 		display: block;
 	}
 }
@@ -233,16 +245,11 @@ h6.mce-content-body,
 	background-color: transparent;
 }
 
-.editor-visual-editor *,
-.editor-visual-editor *:before,
-.editor-visual-editor *:after {
+.edit-post-visual-editor *,
+.edit-post-visual-editor *:before,
+.edit-post-visual-editor *:after {
 	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	box-sizing: inherit;
-}
-
-.editor-visual-editor {
-	background: #fff;
-	/* Fallback for when there is no custom background color defined. */
 }
 
 .mce-content-body hr {
@@ -275,40 +282,40 @@ h6.mce-content-body,
 	font-weight: bold;
 }
 
-.editor-visual-editor dd {
+.edit-post-visual-editor dd {
 	margin: 0 1.5em 1.5em;
 }
 
-.editor-visual-editor img {
+.edit-post-visual-editor img {
 	height: auto;
 	/* Make sure images are scaled correctly. */
 	max-width: 100%;
 	/* Adhere to container width. */
 }
 
-.editor-visual-editor figure {
+.edit-post-visual-editor figure {
 	margin: 1em 0;
 	/* Extra wide images within figure tags don't overflow the content area. */
 }
 
-.editor-visual-editor blockquote {
+.edit-post-visual-editor blockquote {
 	border-left: 6px solid rgba(0,0,0,0.2);
 	font-size: 1.2em;
 	font-style: italic;
 	padding-left: 1em;
 }
 
-.editor-visual-editor blockquote p:last-of-type {
+.edit-post-visual-editor blockquote p:last-of-type {
 	margin-bottom: 0;
 }
 
-.editor-visual-editor table,
-.editor-visual-editor th,
-.editor-visual-editor td {
+.edit-post-visual-editor table,
+.edit-post-visual-editor th,
+.edit-post-visual-editor td {
 	border: 1px solid rgba(0,0,0,.15);
 }
 
-.editor-visual-editor table {
+.edit-post-visual-editor table {
 	border-collapse: separate;
 	border-spacing: 0;
 	border-width: 1px 0 0 1px;
@@ -318,24 +325,24 @@ h6.mce-content-body,
 	width: 100%;
 }
 
-.editor-visual-editor caption,
-.editor-visual-editor th,
-.editor-visual-editor td {
+.edit-post-visual-editor caption,
+.edit-post-visual-editor th,
+.edit-post-visual-editor td {
 	font-weight: normal;
 	text-align: left;
 }
 
-.editor-visual-editor th {
+.edit-post-visual-editor th {
 	border-width: 0 1px 1px 0;
 	font-weight: 700;
 }
 
-.editor-visual-editor td {
+.edit-post-visual-editor td {
 	border-width: 0 1px 1px 0;
 }
 
-.editor-visual-editor th,
-.editor-visual-editor td {
+.edit-post-visual-editor th,
+.edit-post-visual-editor td {
 	padding: 0.4375em;
 }
 
@@ -479,9 +486,12 @@ h6.mce-content-body,
 
 .mce-content-body .aligncenter {
 	clear: both;
-	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.mce-content-body .aligncenter:not(.wp-block-gallery) {
+	display: block;
 }
 
 /* Make sure embeds and iframes fit their containers. */
@@ -588,7 +598,7 @@ h6.mce-content-body,
 	display: inline-block; /* helps with smaller, unaligned images */
 }
 /* Blockquotes*/
-.editor-visual-editor .wp-block-quote {
+.edit-post-visual-editor .wp-block-quote {
 	border: 0;
 	box-shadow: none;
 	color: inherit;
@@ -622,7 +632,7 @@ h6.mce-content-body,
 }
 
 /* Cover Images */
-.editor-visual-editor .editor-block-list__block[data-type="core/cover-image"] {
+.edit-post-visual-editor .editor-block-list__block[data-type="core/cover-image"] {
 	max-width: 100%;
 }
 
@@ -652,25 +662,20 @@ h6.mce-content-body,
 
 /* Buttons */
 
-.wp-block-button {
+.wp-block-button .wp-block-button__link {
 	border-radius: 3px;
 	line-height: 1.25;
 	padding: .6em 1em;
 	text-align: center;
 }
 
-.wp-block-button a {
+.wp-block-button .wp-block-button__link {
 	border: 0;
 	font-weight: bold;
 }
 
-.wp-block-button:not([style]) a:hover,
-.wp-block-button:not([style]) a:focus {
-	color: #fff;
-}
-
-.editor-block-list__block[data-type="core/button"][data-align="wide"],
-.editor-block-list__block[data-type="core/button"][data-align="full"],
+.wp-block-button .wp-block-button__link[data-align="wide"],
+.wp-block-button .wp-block-button__link[data-align="full"],
 .wp-block-button.alignwide,
 .wp-block-button.alignfull {
 	display: block;

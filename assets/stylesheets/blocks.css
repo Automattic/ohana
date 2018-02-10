@@ -121,17 +121,10 @@ p.alignfull {
 }
 
 /* Galleries */
-.wp-block-gallery {}
-.wp-block-gallery.alignleft {}
-.wp-block-gallery.aligncenter {}
-.wp-block-gallery.alignright {}
-.wp-block-gallery.alignwide {}
-.wp-block-gallery.alignfull {}
-.wp-block-gallery.columns-1 {}
-.wp-block-gallery.columns-2 {}
-.wp-block-gallery.columns-3 {}
-.wp-block-gallery.columns-4 {}
-.wp-block-gallery.columns-5 {}
+ul.wp-block-gallery,
+ul.wp-block-gallery li {
+	padding: 0;
+}
 
 /* Blockquotes*/
 .wp-block-quote {}
