@@ -812,8 +812,18 @@ a:hover, a:active {
 		display: block;
 	}
 
+	.main-navigation ul.nav-menu {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: row;
+		flex-direction: row;
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-justify-content: center;
+		justify-content: center;
+	}
+
 	.main-navigation li {
-		display: inline-block;
 		position: relative;
 	}
 
