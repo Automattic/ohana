@@ -217,24 +217,43 @@ ul.wp-block-gallery li {
 
 /* Buttons */
 .wp-block-button {
+	border: 0;
 	border-radius: 3px;
-	line-height: 1.25;
+	display: inline-block;
+	font-weight: bold;
+	line-height: 1;
 	padding: .6em 1em;
-	text-align: center;
 }
 
-.wp-block-button a {
+.wp-block-button:not([style]) {
+	background-color: #FC814A;
+}
+
+.wp-block-button:hover:not([style]),
+.wp-block-button:focus:not([style]) {
+	background-color: #c1582a;
+}
+
+.wp-block-button a:hover,
+.wp-block-button a:focus {
+	opacity: 1.0;
+}
+
+.wp-block-button a:not([style]) {
 	border: 0;
+	color: #fff;
 	font-weight: bold;
 }
 
 .wp-block-button:not([style]) a:hover,
 .wp-block-button:not([style]) a:focus {
 	color: #fff;
+	text-decoration: none;
 }
 
 .wp-block-button.alignwide,
-.wp-block-button.alignfull {
+.wp-block-button.alignfull,
+.wp-block-button.aligncenter {
 	display: block;
 }
 

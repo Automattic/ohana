@@ -11,11 +11,23 @@ Editor Styles for Ohana
 	}
 }
 
-@media screen and (min-width: 37.5em) {
-	*[class^="wp-block-"].alignleft,
-	*[class^="wp-block-"].alignright {
-		max-width: 75%;
-	}
+.editor-block-list__layout .editor-block-list__block[data-align="left"] > .editor-block-list__block-edit,
+.editor-block-list__layout .editor-block-list__block[data-align="right"] > .editor-block-list__block-edit {
+	width: auto;
+}
+
+.editor-block-list__layout .editor-block-list__block[data-align="left"],
+.editor-block-list__layout .editor-block-list__block[data-align="right"] {
+	float: none;
+	margin: none;
+}
+
+.editor-block-list__layout .editor-block-list__block[data-align="left"] .editor-block-list__block-edit {
+	float: left;
+}
+
+.editor-block-list__layout .editor-block-list__block[data-align="right"] .editor-block-list__block-edit {
+	float: right;
 }
 
 /*--------------------------------------------------------------
@@ -598,11 +610,6 @@ h6.mce-content-body,
 	clear: both;
 }
 
-.editor-block-list__layout .editor-block-list__block[data-align="left"] > .editor-block-list__block-edit,
-.editor-block-list__layout .editor-block-list__block[data-align="right"] > .editor-block-list__block-edit {
-	max-width: 100%;
-}
-
 /* Images */
 .wp-block-image {
 	display: inline-block; /* helps with smaller, unaligned images */
@@ -673,16 +680,23 @@ h6.mce-content-body,
 
 /* Buttons */
 
+.wp-block-button {
+	display: block;
+}
+
 .wp-block-button .wp-block-button__link {
+	background-color: #FC814A;
+	border: 0;
 	border-radius: 3px;
+	font-weight: bold;
 	line-height: 1.25;
 	padding: .6em 1em;
 	text-align: center;
 }
 
-.wp-block-button .wp-block-button__link {
-	border: 0;
-	font-weight: bold;
+.wp-block-button .wp-block-button__link:hover,
+.wp-block-button .wp-block-button__link:focus {
+	background-color: #c1582a;
 }
 
 .wp-block-button .wp-block-button__link[data-align="wide"],
