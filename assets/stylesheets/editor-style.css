@@ -254,7 +254,7 @@ h6.mce-content-body,
 }
 
 .editor-block-list__block:not(.is-multi-selected) .wp-block-paragraph {
-	background-color: transparent;
+	background-color: #eef7d2;
 }
 
 .edit-post-visual-editor *,
